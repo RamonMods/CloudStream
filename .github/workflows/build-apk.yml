@@ -44,6 +44,27 @@ jobs:
       - name: Conceder permissão de execução ao gradlew
         run: chmod +x gradlew
 
+      - name: Preparar chave de assinatura
+        shell: bash
+        env:
+          SIGNING_KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
+          SIGNING_KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+          SIGNING_STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+          SIGNING_KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+        run: |
+          if [ -n "$SIGNING_KEYSTORE_BASE64" ] && [ -n "$SIGNING_KEY_ALIAS" ] && [ -n "$SIGNING_STORE_PASSWORD" ] && [ -n "$SIGNING_KEY_PASSWORD" ]; then
+            mkdir -p "$HOME/work/_temp/keystore"
+            echo "$SIGNING_KEYSTORE_BASE64" | base64 -d > "$HOME/work/_temp/keystore/keystore.p12"
+            {
+              echo "SIGNING_KEY_ALIAS=$SIGNING_KEY_ALIAS"
+              echo "SIGNING_STORE_PASSWORD=$SIGNING_STORE_PASSWORD"
+              echo "SIGNING_KEY_PASSWORD=$SIGNING_KEY_PASSWORD"
+            } >> "$GITHUB_ENV"
+            echo "Assinatura preparada."
+          else
+            echo "Sem chave de assinatura; compilando APK sem assinatura."
+          fi
+
       - name: Compilar o APK de release
         run: ./gradlew assembleRelease
 
@@ -68,6 +89,7 @@ jobs:
           path: apks
 
       - name: Publicar a release com os APKs
+        shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: ${{ github.ref_name }}
