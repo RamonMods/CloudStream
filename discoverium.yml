@@ -2,7 +2,7 @@ app:
   name: CloudStream
   authors: RamonMods
   category: entertainment
-  description: Android app for streaming and downloading media.
+  description: Aplicativo Android para streaming e download de mídia, com extensões.
   icon: https://raw.githubusercontent.com/RamonMods/CloudStream/refs/heads/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
   releases:
     url: https://github.com/RamonMods/CloudStream/releases
