@@ -240,7 +240,16 @@ object RepositoryManager {
     }
 
     fun getRepositories(): Array<RepositoryData> {
-        return getKey<Array<RepositoryData>>(REPOSITORIES_KEY) ?: emptyArray()
+        // Primeira instalação: já deixamos o repositório brasileiro disponível.
+        // Se o usuário apagar todos os repositórios, a lista vazia fica salva e não volta.
+        return getKey<Array<RepositoryData>>(REPOSITORIES_KEY) ?: arrayOf(
+            RepositoryData(
+                iconUrl = "https://github.com/RamonMods.png",
+                name = "CloudBrasil",
+                url = "https://raw.githubusercontent.com/RamonMods/CloudBrasil/main/builds/repo.json",
+                description = "Extensões brasileiras para CloudStream (PT-BR)"
+            )
+        )
     }
 
     // Don't want to read before we write in another thread
