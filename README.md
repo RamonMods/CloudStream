@@ -93,7 +93,13 @@ No app: **Configurações → Extensões → Adicionar repositório** e cole:
 https://raw.githubusercontent.com/RamonMods/CloudBrasil/main/builds/repo.json
 ```
 
-Ou use o shortcode `CloudBrasil`.
+Esse repositório já vem configurado na primeira instalação, mas pode ser removido pelo usuário.
+
+### IPTV / TV ao vivo
+
+Em **Configurações → Extensões → Adicionar IPTV**, cole a URL do seu servidor (ou do M3U) e, se o login não estiver no link, informe usuário e senha. O app valida a conta antes de salvar e mostra o **vencimento** e as **conexões** quando o provedor informa esses dados.
+
+A extensão **Xtream** do CloudBrasil precisa estar instalada para os canais aparecerem. Nenhuma credencial é enviada para este repositório — elas ficam só no aparelho.
 
 <a id="idiomas"></a>
 
