@@ -19,6 +19,7 @@
 - [Extensões](#extensoes)
 - [Idiomas](#idiomas)
 - [Mapa do ecossistema CloudBrasil](#mapa-do-ecossistema)
+- [Meus projetos](#meus-projetos)
 - [Outras fontes](#outras-fontes)
 
 <a id="sobre"></a>
@@ -105,6 +106,13 @@ Mesmo sem contribuir com código ou documentação, você pode ajudar com tradu�
 ## Mapa do ecossistema
 
 O app é só uma parte do projeto. A organização `recloudstream` mantém 25 repositórios: plugin Gradle, extensões oficiais, lista de repositórios, documentação, bibliotecas e forks. Veja o levantamento completo em [ECOSSISTEMA.md](ECOSSISTEMA.md) e o fluxo de build em [ARQUITETURA.md](ARQUITETURA.md).
+
+<a id="meus-projetos"></a>
+
+## Meus projetos
+
+- **[RamonMods/CloudBrasil](https://github.com/RamonMods/CloudBrasil)** — extensões PT-BR do CloudStream (veja [Extensões brasileiras](#extensoes)).
+- **[RamonMods/OpenWarp](https://github.com/RamonMods/OpenWarp)** — painel desktop para OpenCode + Cloudflare WARP: status, rotação de IP e retomada de conversa. Quando o limite de cota cai, a troca de IP permite retomar os subagentes. Detalhes em [projetos/OpenWarp.md](projetos/OpenWarp.md).
 
 <a id="outras-fontes"></a>
 
