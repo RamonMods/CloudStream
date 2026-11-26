@@ -410,7 +410,7 @@
     <string name="plugin_downloaded">Doplněk stažen</string>
     <string name="is_adult">18+</string>
     <string name="batch_download_start_format" formatted="true">Spuštěno stahování %1$d %2$s…</string>
-    <string name="blank_repo_message">CloudStream nemá ve výchozím nastavení nainstalované žádné zdroje. Je třeba je nainstalovat z repozitářů. \n \nPřipojte se na náš Discord nebo hledejte na internetu.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="plugins_disabled" formatted="true">Zakázáno: %d</string>
     <string name="plugins_updated" formatted="true">Aktualizováno %d doplňků</string>
     <string name="safe_mode_crash_info">Zobrazit informace o pádu</string>

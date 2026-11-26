@@ -345,6 +345,10 @@
     <string name="add_repository">Adicionar repositório</string>
     <string name="repository_name_hint">Nome do repositório (Opcional)</string>
     <string name="repository_url_hint">URL do repositório or Referência</string>
+    <string name="add_iptv">Adicionar IPTV</string>
+    <string name="iptv_url_hint">URL do servidor ou link M3U (pode conter login)</string>
+    <string name="iptv_user_hint">Usuário (se não estiver na URL)</string>
+    <string name="iptv_pass_hint">Senha (se não estiver na URL)</string>
     <string name="plugin_loaded">Plugin Carregado</string>
     <string name="plugin_deleted">Plugin Apagado</string>
     <string name="plugin_load_fail" formatted="true">Falha ao carregar %s</string>
@@ -360,7 +364,7 @@
     <string name="plugins_downloaded" formatted="true">Transferido: %d</string>
     <string name="plugins_disabled" formatted="true">Desativado: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Não transferido: %d</string>
-    <string name="blank_repo_message">O CloudStream não tem sites instalados por padrão. É necessário instalar os sites a partir de repositórios. \n \nUse o repositório CloudBrasil ou abra uma issue no GitHub.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Ver repositórios da comunidade</string>
     <string name="view_public_repositories_button_short">Lista pública</string>
     <string name="uppercase_all_subtitles">Todas as legendas em maiúsculas</string>

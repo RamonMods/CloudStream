@@ -497,7 +497,7 @@
     <string name="plugins_disabled" formatted="true">Выключана: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Не спампавана: %d</string>
     <string name="plugins_updated" formatted="true">Абноўлена %d убудоў</string>
-    <string name="blank_repo_message">Прадвызначана на CloudStream няма ўсталяваных вэб-сайтаў. Вам трэба ўсталяваць вэб-сайты з рэпазіторыяў. \n \nДалучыцеся да нашага сервера Discord або пашукайце ў сетцы.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Праглядзець рэпазіторыі ад супольнасці</string>
     <string name="view_public_repositories_button_short">Публічны спіс</string>
     <string name="uppercase_all_subtitles">Усе субцітры верхнім рэгістрам</string>

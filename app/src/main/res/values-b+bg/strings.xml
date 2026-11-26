@@ -399,7 +399,7 @@
     <string formatted="true" name="plugins_disabled">Деактивирано: %d</string>
     <string formatted="true" name="plugins_not_downloaded">Не е изтеглено: %d</string>
     <string formatted="true" name="plugins_updated">Актуализирани %d плъгини</string>
-    <string name="blank_repo_message">CloudStream няма инсталирани сайтове по подразбиране. Трябва да инсталирате сайтовете от хранилища. \n \nПрисъединете се към нашия Дискорд или потърсете онлайн.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Вижте хранилищата на общността</string>
     <string name="view_public_repositories_button_short">Публичен списък</string>
     <string name="uppercase_all_subtitles">Всички субтитри с главни букви</string>

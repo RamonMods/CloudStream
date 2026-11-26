@@ -409,7 +409,7 @@
     <string name="subtitles_remove_captions">Zárt feliratok eltávolítása a feliratokból</string>
     <string name="is_adult">18+</string>
     <string name="delete_repository_plugins">Ez az összes tároló bővítményt is törli</string>
-    <string name="blank_repo_message">A CloudStream alapértelmezés szerint nem telepített webhelyeket. A webhelyeket a tárolókból kell telepítenie. \n \nCsatlakozz a Discord-unkhoz vagy keress online.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="extension_version">Verzió</string>
     <string name="action_mark_as_watched">Megjelölés megtekintettként</string>
     <string name="action_remove_from_watched">Eltávolítás a megnézettek közül</string>

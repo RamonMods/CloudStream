@@ -385,7 +385,7 @@
     <string name="plugins_updated" formatted="true">%d plugin diperbarui</string>
     <string name="view_public_repositories_button">Lihat repositori komunitas</string>
     <string name="view_public_repositories_button_short">Daftar publik</string>
-    <string name="blank_repo_message">CloudStream tidak memiliki situs yang terinstal secara default. Anda perlu menginstal situs-situs dari repositori. \n \nBergabunglah dengan Discord kami atau cari secara online.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="repository_url_hint">URL Repositori atau Kode Pendek</string>
     <string name="create_account">Buat Akun</string>
     <string name="error">Error</string>

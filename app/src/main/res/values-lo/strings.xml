@@ -503,7 +503,7 @@
     <string name="plugins_disabled" formatted="true">ປິດການໃຊ້ງານ: %d</string>
     <string name="plugins_not_downloaded" formatted="true">ຍັງບໍ່ໄດ້ດາວໂຫຼດ: %d</string>
     <string name="plugins_updated" formatted="true">ອັບເດດແລ້ວ %d ປລັກອິນ</string>
-    <string name="blank_repo_message">CloudStream ບໍ່ມີເວັບໄຊຕິດຕັ້ງມາໃຫ້ແຕ່ທຳອິດ. ເຈົ້າຕ້ອງຕິດຕັ້ງເວັບໄຊຈາກບ່ອນເກັບຂໍ້ມູນ (Repositories). \n \nເຂົ້າຮ່ວມ Discord ຂອງພວກເຮົາ ຫຼື ຄົ້ນຫາທາງອອນລາຍ.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">ເບິ່ງບ່ອນເກັບຂໍ້ມູນຂອງຊຸມຊົນ</string>
     <string name="view_public_repositories_button_short">ລາຍການສາທາລະນະ</string>
     <string name="uppercase_all_subtitles">ເຮັດໃຫ້ຄຳບັນຍາຍທັງໝົດເປັນຕົວພິມໃຫຍ່</string>

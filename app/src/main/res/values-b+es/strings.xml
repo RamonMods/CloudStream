@@ -269,7 +269,7 @@
     <string name="extension_language">Idioma</string>
     <string name="apk_installer_legacy">Tradicional</string>
     <string name="apk_installer_package_installer">Instalador de programas</string>
-    <string name="blank_repo_message">CloudStream no tiene sitios instalados por defecto. Necesitas instalar los sitios desde los repositorios. \n \nÚnete a nuestro Discord o busca en línea.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="download_all_plugins_from_repo">Advertencia: ¡CloudStream 3 no asume ninguna responsabilidad por el uso de extensiones de terceros y no brinda ningún soporte para ellas!</string>
     <string name="updates_settings">Mostrar actualizaciones de la aplicación</string>
     <string name="apk_installer_settings">Instalador de APK</string>

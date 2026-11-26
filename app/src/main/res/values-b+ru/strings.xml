@@ -405,7 +405,7 @@
     <string name="trailer">Трейлер</string>
     <string name="single_plugin_disabled" formatted="true">%s (отключено)</string>
     <string name="next">Далее</string>
-    <string name="blank_repo_message">В CloudStream по умолчанию не установлены сайты. Вам необходимо установить сайты из репозиториев. \n \nПрисоединяйтесь к нашему Discord-серверу или найдите в интернете.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="error_invalid_data">Недопустимые данные</string>
     <string name="resolution_and_title">Разрешение и название</string>
     <string name="previous">Предыдущий</string>

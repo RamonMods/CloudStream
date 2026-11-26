@@ -405,7 +405,7 @@
     <string name="plugins_downloaded" formatted="true">Preuzeto: %d</string>
     <string name="plugins_disabled" formatted="true">Onemogućeno: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Nepreuzeto: %d</string>
-    <string name="blank_repo_message">CloudStream standardno nema instalirane web-stranice. Stranice moraš instalirati iz repozitorija. \n \nPridruži se našem Discordu ili traži online.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Prikaži repozitorije zajednice</string>
     <string name="view_public_repositories_button_short">Javni popis</string>
     <string name="uppercase_all_subtitles">Koristi velika slova za sve titlove</string>

@@ -98,14 +98,19 @@ import coil3.compose.AsyncImage
 import com.fasterxml.jackson.core.JacksonException
 import com.lagradost.cloudstream3.BuildConfig
 import com.lagradost.cloudstream3.CloudStreamApp.Companion.openBrowser
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
 import com.lagradost.cloudstream3.CommonActivity.activity
+import com.lagradost.cloudstream3.MainActivity
+import com.lagradost.cloudstream3.app
 import com.lagradost.cloudstream3.PROVIDER_STATUS_DOWN
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.TvType
 import com.lagradost.cloudstream3.plugins.PluginManager
 import com.lagradost.cloudstream3.ui.settings.SettingsFragmentScreen
+import com.lagradost.cloudstream3.ui.settings.SettingsGeneral
 import com.lagradost.cloudstream3.ui.settings.SettingsProvidersScreen.toStringRes
 import com.lagradost.cloudstream3.ui.settings.extensions.RepoAdapter.Companion.SHAREABLE_REPO_SEPARATOR
+import com.lagradost.cloudstream3.utils.USER_PROVIDER_API
 import com.lagradost.cloudstream3.utils.SubtitleHelper.fromTagToLanguageName
 import com.lagradost.cloudstream3.utils.SubtitleHelper.getNameNextToFlagEmoji
 import com.lagradost.cloudstream3.utils.UIHelper.navigate
@@ -179,12 +184,19 @@ import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.persistentMapOf
 import kotlinx.collections.immutable.toPersistentSet
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerializationException
 import kotlin.math.roundToInt
 import kotlin.time.Duration.Companion.seconds
 import kotlin.uuid.Uuid
+import org.json.JSONObject
+import java.net.URLEncoder
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 @Composable
 @PreviewLightDark
@@ -260,6 +272,7 @@ object ExtensionsScreen : Screen {
         }
         val state by viewModel.state.collectAsState()
         val highLight = remember { mutableStateOf<Uuid?>(null) }
+        val iptvForm = remember { mutableStateOf<IptvForm?>(null) }
         ObserveEffect(viewModel.effect) { effect ->
             when (effect) {
                 is ExtensionsEffect.RepositoryAdded -> {
@@ -267,7 +280,12 @@ object ExtensionsScreen : Screen {
                 }
             }
         }
-        Content(state = state, onAction = viewModel::onAction, highLightState = highLight)
+        Content(
+            state = state,
+            onAction = viewModel::onAction,
+            highLightState = highLight,
+            iptvFormState = iptvForm,
+        )
     }
 
     @Composable
@@ -275,9 +293,11 @@ object ExtensionsScreen : Screen {
         state: ExtensionsState,
         onAction: (ExtensionsAction) -> Unit,
         highLightState: MutableState<Uuid?> = remember { mutableStateOf(null) },
+        iptvFormState: MutableState<IptvForm?> = remember { mutableStateOf(null) },
     ) {
         val (topFocusRequester, bottomFocusRequester) = remember { FocusRequester.createRefs() }
         val fabExpanded = remember { mutableStateOf(true) }
+        val openIptv: () -> Unit = { iptvFormState.value = IptvForm() }
 
         com.mihon.material.Scaffold(
             // TODO @WindowInsets remove this when we have converted everything to compose
@@ -300,7 +320,7 @@ object ExtensionsScreen : Screen {
                     },
                     navigateUp = LocalBackPress.current,
                     actions = {
-                        TopActionRow(state = state, onAction = onAction)
+                        TopActionRow(state = state, onAction = onAction, onAddIptv = openIptv)
                     },
                     scrollBehavior = it,
                 )
@@ -310,7 +330,12 @@ object ExtensionsScreen : Screen {
             },
             floatingActionButton = {
                 if (isLayout(PHONE) && !state.searchPlugins) {
-                    FloatingActionButton(state = state, onAction = onAction, expanded = fabExpanded)
+                    FloatingActionButton(
+                        state = state,
+                        onAction = onAction,
+                        expanded = fabExpanded,
+                        onAddIptv = openIptv,
+                    )
                 }
             },
             content = { contentPadding ->
@@ -321,14 +346,20 @@ object ExtensionsScreen : Screen {
                     highLightState = highLightState,
                     fabExpanded = fabExpanded,
                     focusRequester = bottomFocusRequester,
-                    topBarFocusRequester = topFocusRequester
+                    topBarFocusRequester = topFocusRequester,
+                    onAddIptv = openIptv,
                 )
             },
         )
+        AddIptvDialog(formState = iptvFormState)
     }
 
     @Composable
-    fun TopActionRow(state: ExtensionsState, onAction: (ExtensionsAction) -> Unit) {
+    fun TopActionRow(
+        state: ExtensionsState,
+        onAction: (ExtensionsAction) -> Unit,
+        onAddIptv: () -> Unit,
+    ) {
         val scope = rememberCoroutineScope()
         val clipboard = LocalClipboard.current
 
@@ -371,6 +402,12 @@ object ExtensionsScreen : Screen {
                     openRepositoryDialog(clipboard = clipboard, onAction = onAction)
                     extraDialog = false
                 }
+            })
+            DropdownMenuItem(text = {
+                Text(text = stringResource(R.string.add_iptv))
+            }, onClick = {
+                extraDialog = false
+                onAddIptv()
             })
             DropdownMenuItem(text = {
                 Text(text = stringResource(R.string.category_provider_test))
@@ -538,6 +575,7 @@ object ExtensionsScreen : Screen {
         fabExpanded: MutableState<Boolean>,
         topBarFocusRequester: FocusRequester,
         focusRequester: FocusRequester,
+        onAddIptv: () -> Unit,
     ) {
         AddDialog(dialog = state.addDialog, onAction = onAction)
         UpdateDialog(dialog = state.updateAllPluginsDialog, onAction = onAction)
@@ -753,6 +791,29 @@ object ExtensionsScreen : Screen {
                                 text = stringResource(R.string.add_repository),
                                 style = MaterialTheme.typography.bodyMedium
                             )
+                        }
+                        item {
+                            val minHeight = LocalPreferenceMinHeight.current
+                            Row(
+                                modifier = Modifier
+                                    .focusOutline()
+                                    .sizeIn(minHeight = minHeight)
+                                    .combinedClickable(onClick = onAddIptv)
+                                    .fillMaxWidth(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.Center,
+                            ) {
+                                Icon(
+                                    painter = painterResource(R.drawable.add_24px),
+                                    tint = MaterialTheme.colorScheme.onBackground,
+                                    contentDescription = stringResource(R.string.add_iptv)
+                                )
+                                Spacer(modifier = Modifier.width(MaterialTheme.padding.medium))
+                                Text(
+                                    text = stringResource(R.string.add_iptv),
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
                         }
                     }
                 } else {
@@ -1478,6 +1539,172 @@ object ExtensionsScreen : Screen {
             })
     }
 
+    /** Configuração rápida de IPTV: uma URL com login vira um site Xtream no app. */
+    data class IptvForm(
+        val url: String = "",
+        val user: String = "",
+        val pass: String = "",
+        val loading: Boolean = false,
+        val status: String? = null,
+        val error: String? = null,
+    )
+
+    private suspend fun saveIptv(form: IptvForm): Pair<String?, String?> =
+        withContext(Dispatchers.IO) {
+            try {
+                val raw = form.url.trim().trim('"')
+                if (raw.isBlank()) return@withContext "Informe a URL do servidor ou do M3U." to null
+
+                var user = form.user.trim()
+                var pass = form.pass.trim()
+                var base = raw
+
+                // user:pass@host:port
+                val compact = Regex("^([^:@/]+):([^@/]+)@([^/]+)/?$").find(raw)
+                if (compact != null) {
+                    user = user.ifBlank { compact.groupValues[1] }
+                    pass = pass.ifBlank { compact.groupValues[2] }
+                    base = "http://" + compact.groupValues[3]
+                } else {
+                    val withScheme = when {
+                        raw.startsWith("http://", true) || raw.startsWith("https://", true) -> raw
+                        else -> "http://$raw"
+                    }
+                    val parsed = java.net.URL(withScheme)
+                    val params = parsed.query.orEmpty().split('&').mapNotNull { part ->
+                        val key = part.substringBefore('=').trim()
+                        val value = part.substringAfter('=', "").trim()
+                        if (key.isBlank()) null else key.lowercase(Locale.ROOT) to value
+                    }.toMap()
+                    user = user.ifBlank { params["username"] ?: params["user"].orEmpty() }
+                    pass = pass.ifBlank { params["password"] ?: params["pass"].orEmpty() }
+                    val port = if (parsed.port in 1..65535) ":${parsed.port}" else ""
+                    base = "${parsed.protocol}://${parsed.host}$port"
+                }
+
+                if (user.isBlank() || pass.isBlank()) {
+                    return@withContext "Informe usuário e senha (ou cole uma URL com login)." to null
+                }
+
+                val encUser = URLEncoder.encode(user, "UTF-8")
+                val encPass = URLEncoder.encode(pass, "UTF-8")
+                val configUrl = "$base/player_api.php?username=$encUser&password=$encPass"
+                val info = JSONObject(app.get(configUrl).text).optJSONObject("user_info")
+
+                fun field(name: String) =
+                    info?.optString(name)?.takeIf { it.isNotBlank() && it != "0" }
+
+                val exp = field("exp_date")
+                val max = field("max_connections")
+                val active = field("active_cons")
+
+                val status = buildString {
+                    append("Conta conectada")
+                    if (!exp.isNullOrBlank()) {
+                        val date = try {
+                            SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+                                .format(Date(exp.toLong() * 1000))
+                        } catch (t: Throwable) {
+                            exp
+                        }
+                        append(" • vence em $date")
+                    } else {
+                        append(" • sem vencimento informado")
+                    }
+                    if (!max.isNullOrBlank() || !active.isNullOrBlank()) {
+                        append(" • conexões ${active ?: "?"}/$max")
+                    }
+                }
+
+                val site = SettingsGeneral.CustomSite(
+                    parentClassName = "Xtream",
+                    name = "IPTV",
+                    url = configUrl,
+                    lang = "pt-br",
+                )
+                val current = SettingsGeneral.getCurrent()
+                current.removeAll { it.parentClassName == "Xtream" && it.name == "IPTV" }
+                current.add(site)
+                setKey(USER_PROVIDER_API, current.toTypedArray())
+                MainActivity.afterPluginsLoadedEvent.invoke(false)
+
+                null to status
+            } catch (t: Throwable) {
+                "Não foi possível validar: ${t.message ?: "erro desconhecido"}" to null
+            }
+        }
+
+    @Composable
+    fun AddIptvDialog(formState: MutableState<IptvForm?>) {
+        val form = formState.value ?: return
+        val scope = rememberCoroutineScope()
+
+        AlertDialog(
+            containerColor = MaterialTheme.colorScheme.background,
+            onDismissRequest = { if (!form.loading) formState.value = null },
+            confirmButton = {
+                WhiteButton(text = stringResource(R.string.add_iptv), onClick = {
+                    scope.launch {
+                        formState.value = form.copy(loading = true, error = null, status = null)
+                        val (error, status) = saveIptv(form)
+                        formState.value = form.copy(loading = false, error = error, status = status)
+                    }
+                })
+            },
+            dismissButton = {
+                BlackButton(text = stringResource(R.string.cancel), onClick = {
+                    formState.value = null
+                })
+            },
+            title = { Text(text = stringResource(R.string.add_iptv)) },
+            text = {
+                Column {
+                    BlackTextField(
+                        value = form.url,
+                        placeHolder = stringResource(R.string.iptv_url_hint),
+                        keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Uri),
+                        singleLine = true,
+                    ) { formState.value = form.copy(url = it, error = null, status = null) }
+
+                    Spacer(modifier = Modifier.height(MaterialTheme.padding.medium))
+
+                    BlackTextField(
+                        value = form.user,
+                        placeHolder = stringResource(R.string.iptv_user_hint),
+                        singleLine = true,
+                    ) { formState.value = form.copy(user = it, error = null, status = null) }
+
+                    Spacer(modifier = Modifier.height(MaterialTheme.padding.medium))
+
+                    BlackTextField(
+                        value = form.pass,
+                        placeHolder = stringResource(R.string.iptv_pass_hint),
+                        keyboardOptions = KeyboardOptions.Default.copy(keyboardType = KeyboardType.Password),
+                        singleLine = true,
+                    ) { formState.value = form.copy(pass = it, error = null, status = null) }
+
+                    if (form.loading) {
+                        Spacer(modifier = Modifier.height(MaterialTheme.padding.medium))
+                        LinearProgressIndicator(
+                            modifier = Modifier.width(TextFieldDefaults.MinWidth),
+                            color = MaterialTheme.colorScheme.onBackground,
+                        )
+                    }
+                    form.status?.let {
+                        Text(text = it, modifier = Modifier.padding(top = MaterialTheme.padding.medium))
+                    }
+                    form.error?.let {
+                        Text(
+                            text = it,
+                            color = MaterialTheme.colorScheme.error,
+                            modifier = Modifier.padding(top = MaterialTheme.padding.medium),
+                        )
+                    }
+                }
+            },
+        )
+    }
+
     @Composable
     fun ErrorButton(error: Throwable?) {
         var shownError by remember { mutableStateOf(false) }
@@ -1548,35 +1775,59 @@ object ExtensionsScreen : Screen {
     fun FloatingActionButton(
         state: ExtensionsState,
         expanded: MutableState<Boolean>,
-        onAction: (ExtensionsAction) -> Unit
+        onAction: (ExtensionsAction) -> Unit,
+        onAddIptv: () -> Unit,
     ) {
         val clipboard = LocalClipboard.current
         val scope = rememberCoroutineScope()
 
-        ExtendedFloatingActionButton(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
-            contentColor = MaterialTheme.colorScheme.onBackground,
-            elevation = FloatingActionButtonDefaults.elevation(
-                defaultElevation = 0.dp,
-                pressedElevation = 0.dp,
-                focusedElevation = 0.dp,
-                hoveredElevation = 0.dp
-            ),
-            expanded = expanded.value,
-            text = {
-                Text(stringResource(R.string.add_repository))
-            },
-            icon = {
-                Icon(
-                    painter = painterResource(R.drawable.add_24px),
-                    contentDescription = stringResource(R.string.add_repository)
-                )
-            },
-            onClick = {
-                scope.launch {
-                    openRepositoryDialog(clipboard, onAction)
-                }
-            })
+        Column(verticalArrangement = Arrangement.spacedBy(MaterialTheme.padding.small)) {
+            ExtendedFloatingActionButton(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                contentColor = MaterialTheme.colorScheme.onBackground,
+                elevation = FloatingActionButtonDefaults.elevation(
+                    defaultElevation = 0.dp,
+                    pressedElevation = 0.dp,
+                    focusedElevation = 0.dp,
+                    hoveredElevation = 0.dp
+                ),
+                expanded = expanded.value,
+                text = {
+                    Text(stringResource(R.string.add_repository))
+                },
+                icon = {
+                    Icon(
+                        painter = painterResource(R.drawable.add_24px),
+                        contentDescription = stringResource(R.string.add_repository)
+                    )
+                },
+                onClick = {
+                    scope.launch {
+                        openRepositoryDialog(clipboard, onAction)
+                    }
+                })
+
+            ExtendedFloatingActionButton(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                contentColor = MaterialTheme.colorScheme.onBackground,
+                elevation = FloatingActionButtonDefaults.elevation(
+                    defaultElevation = 0.dp,
+                    pressedElevation = 0.dp,
+                    focusedElevation = 0.dp,
+                    hoveredElevation = 0.dp
+                ),
+                expanded = expanded.value,
+                text = {
+                    Text(stringResource(R.string.add_iptv))
+                },
+                icon = {
+                    Icon(
+                        painter = painterResource(R.drawable.add_24px),
+                        contentDescription = stringResource(R.string.add_iptv)
+                    )
+                },
+                onClick = onAddIptv)
+        }
     }
 
     suspend fun openRepositoryDialog(

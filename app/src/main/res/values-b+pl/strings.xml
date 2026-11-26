@@ -379,7 +379,7 @@
     <string name="plugins_disabled" formatted="true">Wyłączono: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Nie pobrano: %d</string>
     <string name="plugins_updated">Zaaktualizowano %d rozszerzeń</string>
-    <string name="blank_repo_message">CloudStream nie ma domyślnie zainstalowanych żadnych witryn. Musisz zainstalować witryny z repozytoriów. \n \nDołącz do naszego Discorda lub poszukaj online.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Zobacz repozytoria społeczności</string>
     <string name="view_public_repositories_button_short">Publiczna lista</string>
     <string name="uppercase_all_subtitles">Wszystkie napisy wielką literą</string>

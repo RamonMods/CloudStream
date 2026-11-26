@@ -406,7 +406,7 @@
     <string name="plugins_disabled" formatted="true">Disabilitato: %d</string>
     <string name="plugins_not_downloaded" formatted="true">Non scaricato: %d</string>
     <string name="plugins_updated" formatted="true">Aggiornati %d plugin</string>
-    <string name="blank_repo_message">CloudStream non ha siti installati per impostazione predefinita. È necessario installare i siti dai repository. \n \nUnisciti al nostro Discord o cerca online.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Visualizza i repository della comunità</string>
     <string name="view_public_repositories_button_short">Lista pubblica</string>
     <string name="uppercase_all_subtitles">Tutti i sottotitoli in maiuscolo</string>

@@ -407,7 +407,7 @@
     <string name="plugins_disabled" formatted="true">Devre dışı: %d</string>
     <string name="plugins_not_downloaded" formatted="true">İndirilmeyen: %d</string>
     <string name="plugins_updated" formatted="true">%d eklentiler güncellendi</string>
-    <string name="blank_repo_message">CloudStream, varsayılan olarak hiçbir site ile gelmez. Siteleri depolardan kurmanız gerekir. \n \nDiscord\'umuza katılın veya internet üzerinden arama yapın.</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">Topluluk depolarını görüntüle</string>
     <string name="view_public_repositories_button_short">Herkese açık liste</string>
     <string name="uppercase_all_subtitles">Tüm altyazılar büyük harf</string>

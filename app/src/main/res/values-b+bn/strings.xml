@@ -508,7 +508,7 @@
     <string name="plugins_disabled" formatted="true">নিষ্ক্রিয়: %d</string>
     <string name="plugins_not_downloaded" formatted="true">ডাউনলোড করা হয়নি: %d</string>
     <string name="plugins_updated" formatted="true">%dটি প্লাগইন আপডেট করা হয়েছে</string>
-    <string name="blank_repo_message">CloudStream-এ ডিফল্টভাবে কোনো সাইট ইনস্টল করা থাকে না। আপনাকে রিপোজিটরি থেকে সাইটগুলো ইনস্টল করতে হবে।\n\nআমাদের Discord-এ যুক্ত হোন অথবা অনলাইনে অনুসন্ধান করুন।</string>
+    <string name="blank_repo_message">O CloudStream não vem com sites instalados. Toque em Adicionar repositório para instalar o CloudBrasil ou em Adicionar IPTV para usar sua lista.</string>
     <string name="view_public_repositories_button">কমিউনিটি রিপোজিটরিগুলো দেখুন</string>
     <string name="view_public_repositories_button_short">পাবলিক তালিকা</string>
     <string name="uppercase_all_subtitles">সব সাবটাইটেল বড় হাতের অক্ষরে দেখান</string>
