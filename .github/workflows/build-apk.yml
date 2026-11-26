@@ -1,0 +1,48 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código-fonte
+        uses: actions/checkout@v6
+
+      - name: Configurar o Java 17 (Temurin)
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Configurar o SDK do Android
+        uses: android-actions/setup-android@v3
+
+      - name: Instalar a plataforma do Android necessária
+        shell: bash
+        run: |
+          COMPILE_SDK=$(grep '^compileSdk' gradle/libs.versions.toml | grep -o '[0-9]\+' | head -1)
+          sdkmanager "platforms;android-${COMPILE_SDK}"
+
+      - name: Configurar o cache do Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Conceder permissão de execução ao gradlew
+        run: chmod +x gradlew
+
+      - name: Compilar o APK de release
+        run: ./gradlew assembleRelease
+
+      - name: Enviar os APKs como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: apks-release
+          path: app/build/outputs/apk/*/release/*.apk
+          if-no-files-found: error
