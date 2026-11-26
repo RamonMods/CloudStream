@@ -83,10 +83,10 @@
         <Preference
             android:icon="@drawable/ic_github_logo"
             android:title="@string/github"
-            app:summary="https://github.com/recloudstream/cloudstream">
+            app:summary="https://github.com/RamonMods/CloudStream">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/recloudstream/cloudstream" />
+                android:data="https://github.com/RamonMods/CloudStream" />
         </Preference>
 
         <Preference
@@ -96,14 +96,6 @@
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/LagradOst/QuickNovel" />
-        </Preference>
-        <Preference
-            android:icon="@drawable/ic_baseline_discord_24"
-            android:title="@string/discord"
-            app:summary="https://discord.gg/5Hus6fM">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://discord.gg/5Hus6fM" />
         </Preference>
         <Preference
             android:icon="@drawable/baseline_description_24"

@@ -1029,11 +1029,9 @@ open class ResultFragmentPhone : BaseFragment<FragmentResultSwipeBinding>(
                                     "$APP_STRING_SHARE:$nameBase64?$urlBase64",
                                     "UTF-8"
                                 )
-                                val redirectUrl =
-                                    "https://recloudstream.github.io/csredirect?redirectto=$encodedUri"
                                 i.type = "text/plain"
                                 i.putExtra(Intent.EXTRA_SUBJECT, d.title)
-                                i.putExtra(Intent.EXTRA_TEXT, redirectUrl)
+                                i.putExtra(Intent.EXTRA_TEXT, encodedUri)
                                 startActivity(Intent.createChooser(i, d.title))
                             } catch (e: Exception) {
                                 logError(e)
