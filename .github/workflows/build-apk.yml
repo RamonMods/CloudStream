@@ -72,6 +72,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$TAG" apks/*.apk \
+          mapfile -t APK_FILES < <(find apks -type f -name '*.apk' | sort)
+          if [ "${#APK_FILES[@]}" -eq 0 ]; then
+            echo "Nenhum APK encontrado no artefato."
+            exit 1
+          fi
+          gh release create "$TAG" "${APK_FILES[@]}" \
             --title "$TAG" \
             --notes "APKs compilados automaticamente a partir da tag $TAG. Instale o repositório de extensões CloudBrasil em Configurações → Extensões para ter sites e canais."
