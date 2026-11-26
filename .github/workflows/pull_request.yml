@@ -1,4 +1,4 @@
-name: Artifact Build
+name: Build de artefato
 
 on: [pull_request]
 
@@ -11,30 +11,30 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 
-    - name: Set up JDK 17
+    - name: Configurar o Java 17
       uses: actions/setup-java@v5
       with:
         distribution: temurin
         java-version: 17
 
-    - name: Grant execute permission for gradlew
+    - name: Conceder permissão de execução ao gradlew
       run: chmod +x gradlew
 
-    - name: Setup Gradle
+    - name: Configurar o cache do Gradle
       uses: gradle/actions/setup-gradle@v5
       with:
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
         cache-read-only: false
 
-    - name: Ensure binary compatibility
-      # This is to ensure that your code is backwards compatible.
-      # If this fails you need to add a @Prerelease annotation to new code.
+    - name: Garantir compatibilidade binária
+      # Garante que o código novo continua compatível com versões anteriores.
+      # Se falhar, adicione a anotação @Prerelease ao código novo.
       run: ./gradlew library:checkKotlinAbi
 
-    - name: Run Gradle
+    - name: Rodar o Gradle
       run: ./gradlew assemblePrereleaseDebug lint check
 
-    - name: Upload Artifact
+    - name: Enviar o artefato
       uses: actions/upload-artifact@v7
       with:
         name: pull-request-build

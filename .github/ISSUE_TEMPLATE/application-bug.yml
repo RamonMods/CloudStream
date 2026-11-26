@@ -1,92 +1,92 @@
-name: 🐞 Application Issue Report
-description: Report a issue in CloudStream
+name: 🐞 Relatório de problema do aplicativo
+description: Relate um problema no CloudStream
 labels: [bug]
 body:
 
   - type: textarea
     id: reproduce-steps
     attributes:
-      label: Steps to reproduce
-      description: Provide an example of the issue.
+      label: Passos para reproduzir
+      description: Dê um exemplo do problema.
       placeholder: |
-        Example:
-          1. First step
-          2. Second step
-          3. Issue here
+        Exemplo:
+          1. Primeiro passo
+          2. Segundo passo
+          3. O problema aparece aqui
     validations:
       required: true
 
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected behavior
+      label: Comportamento esperado
       placeholder: |
-        Example:
-          "This should happen..."
+        Exemplo:
+          "Deveria acontecer isto..."
     validations:
       required: true
 
   - type: textarea
     id: actual-behavior
     attributes:
-      label: Actual behavior
+      label: Comportamento atual
       placeholder: |
-        Example:
-          "This happened instead..."
+        Exemplo:
+          "Aconteceu isto no lugar..."
     validations:
       required: true
 
   - type: input
     id: cloudstream-version
     attributes:
-      label: Cloudstream version and commit hash
+      label: Versão do CloudStream e hash do commit
       description: |
-        You can find your Cloudstream version in **Settings**. Commit hash is the 7 character string next to the version.
+        A versão aparece em **Configurações**. O hash do commit são os 7 caracteres ao lado da versão.
       placeholder: |
-        Example: "2.8.16 a49f466"
+        Exemplo: "2.8.16 a49f466"
     validations:
       required: true
 
   - type: input
     id: android-version
     attributes:
-      label: Android version
+      label: Versão do Android
       description: |
-        You can find this somewhere in your Android settings.
+        Você encontra isso nas configurações do Android.
       placeholder: |
-        Example: "Android 12"
+        Exemplo: "Android 12"
     validations:
       required: true
-   
+
   - type: textarea
     id: logcat
     attributes:
       label: Logcat
       placeholder: |
-        To get logcat please go to Settings > Updates and backup > Show logcat 🐈.
-        You can attach a file or link to some pastebin service if the file is too big.
+        Para pegar o logcat: Configurações > Atualizações e backup > Mostrar logcat 🐈.
+        Se o arquivo for grande, anexe um arquivo ou cole um link de um serviço de paste.
       render: java
 
   - type: textarea
     id: other-details
     attributes:
-      label: Other details
+      label: Outros detalhes
       placeholder: |
-        Additional details and attachments.
+        Detalhes adicionais e anexos.
 
   - type: checkboxes
     id: acknowledgements
     attributes:
-      label: Acknowledgements
-      description: Your issue will be closed if you haven't done these steps.
+      label: Confirmações
+      description: Sua issue será fechada se estes passos não forem cumpridos.
       options:
-        - label: I am sure my issue is related to the app and **NOT some extension**.
+        - label: Tenho certeza de que o problema é do aplicativo e **NÃO de alguma extensão**.
           required: true
-        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
+        - label: Procurei nas issues existentes e este é um novo relato, **NÃO** é duplicado nem relacionado a outra issue aberta.
           required: true
-        - label: I have written a short but informative title.
+        - label: Escrevi um título curto e informativo.
           required: true
-        - label: I have updated the app to pre-release version **[Latest](https://github.com/RamonMods/CloudStream/releases)**.
+        - label: Estou usando a versão mais recente compilada pela CI **[Actions](https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml)**.
           required: true
-        - label: I will fill out all of the requested information in this form.
+        - label: Vou preencher todas as informações pedidas neste formulário.
           required: true

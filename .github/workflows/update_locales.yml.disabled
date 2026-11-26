@@ -1,4 +1,4 @@
-name: Fix locale issues
+name: Corrigir problemas de locale
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
   create:
     runs-on: ubuntu-latest
     steps:
-    - name: Generate access token
+    - name: Gerar token de acesso
       id: generate_token
       uses: tibdex/github-app-token@v2
       with:
@@ -30,17 +30,17 @@ jobs:
       with:
         token: ${{ steps.generate_token.outputs.token }}
 
-    - name: Install dependencies
+    - name: Instalar dependências
       run: pip3 install lxml requests
 
-    - name: Edit files
+    - name: Editar arquivos
       run: python3 .github/locales.py
 
-    - name: Commit to the repo
+    - name: Commitar no repositório
       run: |
         git config --local user.email "RamonMods[bot]@users.noreply.github.com"
         git config --local user.name "RamonMods[bot]"
         git add .
-        # "echo" returns true so the build succeeds, even if no changed files
-        git commit -m 'chore(locales): fix locale issues' || echo
+        # "echo" retorna sucesso para o build não falhar quando não houver mudanças
+        git commit -m 'chore(locales): corrige problemas de locale' || echo
         git push

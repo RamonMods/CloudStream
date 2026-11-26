@@ -1,4 +1,4 @@
-name: Instrumented Tests
+name: Testes instrumentados
 
 on:
   issue_comment:
@@ -15,7 +15,7 @@ jobs:
       github.event.issue.pull_request &&
       github.event.comment.body == '/run-tests'
     steps:
-    - name: Check permission
+    - name: Verificar permissão
       uses: actions/github-script@v9
       with:
         script: |
@@ -23,19 +23,15 @@ jobs:
           const association = context.payload.comment.author_association;
           const allowed = ['OWNER', 'MEMBER'];
 
-          const isAllowed =
-            login === 'Luna712' ||
-            allowed.includes(association);
-
-          if (!isAllowed) {
-            core.setFailed(`User ${login} is not permitted to trigger this workflow.`);
+          if (!allowed.includes(association)) {
+            core.setFailed(`O usuário ${login} não tem permissão para iniciar este workflow.`);
           }
 
     - uses: actions/checkout@v6
       with:
         ref: refs/pull/${{ github.event.issue.number }}/head
 
-    - name: Post started comment
+    - name: Publicar comentário de início
       uses: actions/github-script@v9
       with:
         script: |
@@ -43,37 +39,37 @@ jobs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: 'Instrumented tests are running. [View live progress](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
+            body: 'Os testes instrumentados estão rodando. [Ver progresso](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
           })
 
-    - name: Set up JDK 17
+    - name: Configurar o Java 17
       uses: actions/setup-java@v5
       with:
         distribution: temurin
         java-version: 17
 
-    - name: Grant execute permission for gradlew
+    - name: Conceder permissão de execução ao gradlew
       run: chmod +x gradlew
 
-    - name: Setup Gradle
+    - name: Configurar o cache do Gradle
       uses: gradle/actions/setup-gradle@v5
       with:
         cache-encryption-key: ${{ secrets.GRADLE_ENCRYPTION_KEY }}
         cache-read-only: false
 
-    - name: Get target SDK
+    - name: Obter o SDK alvo
       id: sdk
       run: |
         TARGET_SDK=$(grep 'targetSdk' gradle/libs.versions.toml | grep -o '[0-9]\+' | head -1)
         echo "version=$TARGET_SDK" >> $GITHUB_OUTPUT
 
-    - name: Enable KVM
+    - name: Habilitar o KVM
       run: |
         echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
         sudo udevadm control --reload-rules
         sudo udevadm trigger --name-match=kvm
 
-    - name: Run Instrumented Tests
+    - name: Rodar os testes instrumentados
       id: tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
@@ -82,14 +78,14 @@ jobs:
         profile: Nexus 6
         script: ./gradlew connectedPrereleaseDebugAndroidTest
 
-    - name: Upload Test Results
+    - name: Enviar os resultados dos testes
       if: always()
       uses: actions/upload-artifact@v7
       with:
         name: instrumented-test-results
         path: '**/build/reports/androidTests/'
 
-    - name: Post finished comment
+    - name: Publicar comentário final
       if: always()
       uses: actions/github-script@v9
       with:
@@ -100,6 +96,6 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             body: success
-              ? 'Instrumented tests passed. [View results](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
-              : 'Instrumented tests failed. [View results](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
+              ? 'Os testes instrumentados passaram. [Ver resultados](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
+              : 'Os testes instrumentados falharam. [Ver resultados](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})'
           })

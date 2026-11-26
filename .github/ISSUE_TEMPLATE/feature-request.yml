@@ -1,33 +1,33 @@
-name: ⭐ Feature request
-description: Suggest a feature to improve the app
+name: ⭐ Sugestão de funcionalidade
+description: Sugira uma funcionalidade para melhorar o aplicativo
 labels: [enhancement]
 body:
 
   - type: textarea
     id: feature-description
     attributes:
-      label: Describe your suggested feature
-      description: How can an existing source be improved?
+      label: Descreva a funcionalidade sugerida
+      description: Como o aplicativo pode ser melhorado?
       placeholder: |
-        Example:
-          "It should work like this..."
+        Exemplo:
+          "Deveria funcionar assim..."
     validations:
       required: true
 
   - type: textarea
     id: other-details
     attributes:
-      label: Other details
+      label: Outros detalhes
       placeholder: |
-        Additional details and attachments.
+        Detalhes adicionais e anexos.
 
   - type: checkboxes
     id: acknowledgements
     attributes:
-      label: Acknowledgements
-      description: Your issue will be closed if you haven't done these steps.
+      label: Confirmações
+      description: Sua issue será fechada se estes passos não forem cumpridos.
       options:
-        - label: My suggestion is **NOT** about adding a new provider
+        - label: Minha sugestão **NÃO** é sobre adicionar um novo provedor
           required: true
-        - label: I have searched the existing issues and this is a new ticket, **NOT** a duplicate or related to another open issue.
+        - label: Procurei nas issues existentes e este é um novo relato, **NÃO** é duplicado nem relacionado a outra issue aberta.
           required: true
