@@ -6,7 +6,7 @@
 
 **⚠️ Aviso: por padrão o app não traz nenhuma fonte de vídeo. Você precisa instalar extensões para adicionar funcionalidade.**
 
-<a href="https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml"><img src="https://img.shields.io/badge/Baixar_APK-Artifacts-1F883D?style=for-the-badge&logo=android&logoColor=white" alt="Baixar APK" height="50"/></a>
+<a href="https://github.com/RamonMods/CloudStream/releases/latest"><img src="https://img.shields.io/github/v/release/RamonMods/CloudStream?style=for-the-badge&logo=android&logoColor=white&label=Baixar%20APK" alt="Baixar APK" height="50"/></a>
 
 **Discord: em breve.**
 
@@ -21,7 +21,6 @@
 - [Extensões](#extensoes)
 - [Idiomas](#idiomas)
 - [Mapa do ecossistema CloudBrasil](#mapa-do-ecossistema)
-- [Meus projetos](#meus-projetos)
 - [Outras fontes](#outras-fontes)
 
 <a id="sobre"></a>
@@ -45,13 +44,11 @@ CloudStream é um centro de mídia que prioriza liberdade e flexibilidade para u
 
 ## Instalação
 
-A instalação e a compilação estão documentadas neste repositório:
+- [Baixar a versão mais recente](https://github.com/RamonMods/CloudStream/releases/latest) — os APKs são publicados automaticamente em toda tag `v*`.
+- [APKs de teste compilados pela CI](https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml) — para acompanhar mudanças antes de uma versão marcada.
+- [Arquitetura e compilação](ARQUITETURA.md) — para compilar a partir do código-fonte.
 
-- [Arquitetura e compilação](ARQUITETURA.md)
-- [APK compilado pela CI (Actions)](https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml)
-- [Versões e tags](https://github.com/RamonMods/CloudStream/tags)
-
-Esta edição usa o identificador próprio `com.ramonmods.cloudstream`, então pode ser instalada ao lado do app original sem conflito.
+Esta edição usa o identificador próprio `com.ramonmods.cloudstream`, então pode ser instalada ao lado do app original sem conflito. No Android, é preciso permitir a instalação de apps de fontes desconhecidas para o APK baixado.
 
 <a id="contribuindo"></a>
 
@@ -79,7 +76,7 @@ Neste repositório você encontra:
 | Arquivo | Conteúdo |
 |---|---|
 | [ARQUITETURA.md](ARQUITETURA.md) | Módulos do app, sistema de plugins, `#EXTINF`/`.cs3`, `repo.json` e `plugins.json` |
-| [ECOSSISTEMA.md](ECOSSISTEMA.md) | Todos os repositórios da organização `recloudstream` e o papel de cada um |
+| [ECOSSISTEMA.md](ECOSSISTEMA.md) | Todos os repositórios mapeados do ecossistema e o papel de cada um |
 | [REPOSITORIOS.md](REPOSITORIOS.md) | Repositórios de plugins conhecidos e como verificar se estão vivos |
 | [scripts/clonar-ecossistema.ps1](scripts/clonar-ecossistema.ps1) | Clona o ecossistema inteiro em uma pasta única |
 
@@ -111,14 +108,7 @@ As traduções ficam em `app/src/main/res/values-*` e podem ser editadas direto 
 
 ## Mapa do ecossistema
 
-O app é só uma parte do projeto. O ecossistema do CloudStream tem 25 repositórios (plugin Gradle, extensões, lista de repositórios, documentação, bibliotecas e forks). O levantamento técnico completo está em [ECOSSISTEMA.md](ECOSSISTEMA.md), com o fluxo de build em [ARQUITETURA.md](ARQUITETURA.md) e os detalhes em [mapa/](mapa/).
-
-<a id="meus-projetos"></a>
-
-## Meus projetos
-
-- **[RamonMods/CloudBrasil](https://github.com/RamonMods/CloudBrasil)** — extensões PT-BR do CloudStream (veja [Extensões brasileiras](#extensoes)).
-- **[RamonMods/OpenWarp](https://github.com/RamonMods/OpenWarp)** — painel desktop para OpenCode + Cloudflare WARP: status, rotação de IP e retomada de conversa. Quando o limite de cota cai, a troca de IP permite retomar os subagentes. Detalhes em [projetos/OpenWarp.md](projetos/OpenWarp.md).
+O app é só uma parte do projeto. O levantamento técnico dos repositórios mapeados (plugin Gradle, extensões, lista de repositórios, documentação, bibliotecas e forks) está em [ECOSSISTEMA.md](ECOSSISTEMA.md), com o fluxo de build em [ARQUITETURA.md](ARQUITETURA.md) e os detalhes em [mapa/](mapa/).
 
 <a id="outras-fontes"></a>
 

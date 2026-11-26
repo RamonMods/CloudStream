@@ -3,6 +3,7 @@ name: Build APK
 on:
   push:
     branches: [ master ]
+    tags: [ 'v*' ]
   pull_request:
   workflow_dispatch:
 
@@ -52,3 +53,25 @@ jobs:
           name: apks-release
           path: app/build/outputs/apk/*/release/*.apk
           if-no-files-found: error
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Baixar os APKs compilados
+        uses: actions/download-artifact@v4
+        with:
+          name: apks-release
+          path: apks
+
+      - name: Publicar a release com os APKs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$TAG" apks/*.apk \
+            --title "$TAG" \
+            --notes "APKs compilados automaticamente a partir da tag $TAG. Instale o repositório de extensões CloudBrasil em Configurações → Extensões para ter sites e canais."
