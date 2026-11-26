@@ -195,9 +195,6 @@
     <string name="prerelease_already_installed">Перадфінальная версія ўжо ўсталявана.</string>
     <string name="prerelease_install_failed">Не ўдалося ўсталяваць перадфінальную версію.</string>
     <string name="apk_installer_settings">Усталёўшчык APK</string>
-    <string name="lightnovel">Лёгкая праграма для раманаў ад тых жа распрацоўшчыкаў</string>
-    <string name="anim">Праграма для анімэ ад тых жа распрацоўшчыкаў</string>
-    <string name="discord">Далучайцеся да Discord</string>
     <string name="benene">Даць распрацоўшчыкам бенен</string>
     <string name="benene_des">Дадзена бененаў</string>
     <string name="app_language">Мова праграмы</string>
@@ -645,7 +642,6 @@
     <string name="biometric_prompt_description">Праз некалькі няўдалых спроб акно з запытам закрыецца. Проста перазапусціце праграму, каб паўтарыць спробу.</string>
     <string name="biometric_warning">Вашы дадзеныя CloudStream былібылі толькі што зарэзерваваныя. Нягледзячы на тое, што магчымасць вельмі маленькая, усе прылады могуць паводзіць сябе па-рознаму. У рэдкасным выпадку, калі вы страціце доступ да праграмы, поўнасцю ачысціце даныя і аднавіце іх праз рэзервовую копію. Выбачайце за любую нязручнасць, якая можа з гэтага атрымацца.</string>
     <string name="reset_btn">Скінуць</string>
-    <string name="cs3wiki">CloudStream-Вікі</string>
     <string name="device_pin_url_message">Наведайце <b>%s</b> на вашым смартфоне або камп\'ютары і ўвядзіце код вышэй</string>
     <string name="device_pin_error_message">Не ўдалося атрымаць PIN-код прылады, паспрабуйце лакальную праверку сапраўднасці</string>
     <string name="device_pin_expired_message">PIN-код састарэў!</string>

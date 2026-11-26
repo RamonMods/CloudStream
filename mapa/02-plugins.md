@@ -53,4 +53,4 @@ Todos os `repo.json` abaixo foram testados em 25/11/2026 (GET, timeout 25 s). HT
 | animesfhd/cloudstream-extensions | `https://raw.githubusercontent.com/animesfhd/cloudstream-extensions/main/builds/repo.json` | **200** | "Extensão oficial do AnimesFHD" (animes legendados e dublados em PT-BR); MIT; consta no `repos-db.json` oficial. |
 | Fabiano2503/astra-cloudstream | `https://raw.githubusercontent.com/Fabiano2503/astra-cloudstream/refs/heads/builds/repo.json` | **200** | Repo "Astra" (mantenedor BR); os `.cs3` ficam no branch `builds`. O caminho `main/builds/repo.json` retorna **404**. |
 
-**Veredito:** para PT-BR, o par mais sólido é o repo oficial + AnimesFHD (listados/verificados pelo `cs-repos`); `lietrepo` e `astra` cobrem providers brasileiros amplos, mas não passam pelo CI da org — trate como código de terceiros.
+**Veredito:** para PT-BR, use o repositório **CloudBrasil** (`RamonMods/CloudBrasil`), que é o padrão do app; `lietrepo` e `astra` cobrem providers brasileiros amplos, mas não passam por CI auditado — trate como código de terceiros.

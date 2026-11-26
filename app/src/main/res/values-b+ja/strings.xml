@@ -171,7 +171,6 @@
     <string name="show_log_cat">Logcat 🐈を表示</string>
     <string name="test_log">ログ</string>
     <string name="search">検索</string>
-    <string name="discord">Discordに参加</string>
     <string name="update">アップデート</string>
     <string name="check_for_update">アップデートを確認</string>
     <string name="show_title">作品名</string>
@@ -349,7 +348,6 @@
     <string name="favorite_removed">%s がお気に入りから削除されました</string>
     <string name="pin">PIN</string>
     <string name="auto_rotate_video">自動回転</string>
-    <string name="cs3wiki">CloudStreamウィキ</string>
     <string name="already_voted">すでに投票しました</string>
     <string name="duplicate_add">追加</string>
     <string name="mobile_data">モバイルデータ</string>
@@ -411,7 +409,6 @@
     <string name="action_subscribe">購読</string>
     <string name="subtitles_from_embedded">埋め込み</string>
     <string name="subtitles_from_online">オンライン</string>
-    <string name="lightnovel">同じ開発者によるライトノベルアプリ</string>
     <string name="add_site_pref">サイトをクローン</string>
     <string name="actor_main">メイン</string>
     <string name="subtitles_remove_bloat">字幕から不要なものを削除</string>
@@ -482,7 +479,6 @@
     <string name="episode_action_chromecast_mirror">Chromecastミラー</string>
     <string name="double_tap_to_seek_settings_des">前後にシークするために右側または左側をダブルタップ</string>
     <string name="quality_hdr">HDR</string>
-    <string name="anim">同じ開発者によるアニメアプリ</string>
     <string name="remote_error">リモートエラー</string>
     <string name="episode_action_download_mirror">ミラーをダウンロード</string>
     <string name="poster_ui_settings">ポスター上のUI要素を切り替え</string>

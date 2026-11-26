@@ -103,9 +103,6 @@
     <string name="updates_settings">Εμφάνιση ενημερώσεων</string>
     <string name="updates_settings_des">Αυτόματη αναζήτηση νέων ενημερώσεων κατά την εκκίνηση της εφαρμογής.</string>
     <string name="github">GitHub</string>
-    <string name="lightnovel">Εφαρμογή βιβλίων από τους ίδιους προγραμματιστές</string>
-    <string name="anim">Εφαρμογή άνιμε από τους ίδιους προγραμματιστές</string>
-    <string name="discord">Βρείτε μας στο Discord</string>
     <string name="benene">Δώστε μία μπανάνα στους προγραμματιστές</string>
     <string name="benene_des">Μπανάνα δόθηκε</string>
     <string name="player_speed_text_format" formatted="true">Ταχύτητα (%.2fx)</string>
@@ -613,7 +610,6 @@
     <string name="sort_release_date_new">Ημερομηνία κυκλοφορίας (από νέο σε παλιό)</string>
     <string name="preview_seekbar">Προεπισκόπηση Γραμμή αναζήτησης</string>
     <string name="play_from_beginning_img_des">Παίξε από την αρχή</string>
-    <string name="cs3wiki">Το Wiki του CloudStream</string>
     <string name="hide_player_control_names">Απόκρυψη των ονομάτων των χειρισμών του παίκτη</string>
     <string name="auth_locally">Τοπική εξουσιοδότηση</string>
     <string name="speech_recognition_unavailable">Αναγνώριση ομιλίας μη διαθέσιμη</string>

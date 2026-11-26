@@ -136,8 +136,6 @@
     <string name="show_fillers_settings">Filler epizódok mutatása animéknél</string>
     <string name="show_trailers_settings">Előzetesek megjelenítése</string>
     <string name="redo_setup_process">Telepítési folyamat megismétlése</string>
-    <string name="anim">Anime applikáció ugyanazoktól a fejlesztőktől</string>
-    <string name="lightnovel">Light novel applikáció ugyanazoktól a fejlesztőktől</string>
     <string name="app_language">Alkalmazás nyelve</string>
     <string name="episode">Epizód</string>
     <string name="episodes">Epizódok</string>
@@ -193,7 +191,6 @@
     <string name="updates_settings">Alkalmazás frissítések megjelenítése</string>
     <string name="updates_settings_des">Automatikusan keressen új frissítéseket indításkor.</string>
     <string name="github">Github</string>
-    <string name="discord">Csatlakozz a Discordhoz</string>
     <string name="benene">Adj Banánt a fejlesztőknek</string>
     <string name="no_chromecast_support_toast">Ez a szolgáltató nem támogatja a Chromecast-ot</string>
     <string name="no_links_found_toast">Nem található link</string>
@@ -626,7 +623,6 @@
     <string name="biometric_setting_summary">Az alkalmazás feloldása ujjlenyomat, arcfelismerés, PIN-kód, minta vagy jelszó segítségével.</string>
     <string name="biometric_prompt_description">Néhány sikertelen kísérlet után a parancssor bezárul. Egyszerűen indítsa újra az alkalmazást, és próbálja meg újra.</string>
     <string name="reset_btn">Visszaállítás</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
     <string name="device_pin_url_message">Látogasson el <b>%s</b> okostelefonján vagy számítógépén, és írja be a fenti kódot</string>
     <string name="device_pin_error_message">Nem működik az eszköz PIN-kódja, próbálkozzon helyi hitelesítéssel</string>
     <string name="device_pin_expired_message">A PIN-kód most lejárt!</string>

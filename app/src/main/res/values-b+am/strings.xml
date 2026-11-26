@@ -193,8 +193,6 @@
     <string name="apk_installer_settings">የAPK መጫኛ</string>
     <string name="apk_installer_settings_des">አንዳንድ ስልኮች አዲሱን የፓኬጅ መጫኛ (package installer) አይቀበሉም። ዝማኔዎቹ መጫን ካልቻሉ፣ የድሮውን አማራጭ (legacy option) ይሞክሩ።</string>
     <string name="github">Github</string>
-    <string name="lightnovel">ቀለል ያለ መተግበሪያ ክተመሳሳይ አበልጻጊዎች</string>
-    <string name="discord">Discord-ን ይቀላቀሉ</string>
     <string name="benene">አንድ benene ለአበልጻጊው ይስጡ</string>
     <string name="benene_des">benene ተሰጥቷል</string>
     <string name="app_language">የመተግበሪያው ቋንቋ</string>

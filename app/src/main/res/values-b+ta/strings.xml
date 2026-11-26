@@ -180,7 +180,6 @@
     <string name="benene_des">கொடுக்கப்பட்ட பெனீன்</string>
     <string name="movies">திரைப்படங்கள்</string>
     <string name="no">இல்லை</string>
-    <string name="discord">முரண்பாட்டில் சேரவும்</string>
     <string name="asian_drama">ஆசிய நாடகங்கள்</string>
     <string name="action_open_play">@string/home_play</string>
     <string name="rating">செயல்வரம்பு</string>
@@ -383,7 +382,6 @@
     <string name="updates_settings">பயன்பாட்டு புதுப்பிப்புகளைக் காட்டு</string>
     <string name="updates_settings_des">பயன்பாட்டைத் தொடங்கிய பின் புதிய புதுப்பிப்புகளைத் தானாகவே தேடுங்கள்.</string>
     <string name="redo_setup_process">அமைவு செயல்முறை மீண்டும்</string>
-    <string name="lightnovel">அதே தேவ்சின் ஒளி நாவல் பயன்பாடு</string>
     <string name="benene">தேவ்சுக்கு ஒரு பெனீன் கொடுங்கள்</string>
     <string name="episode_format" formatted="true">%1$d %2$s</string>
     <string name="no_episodes_found">அத்தியாயங்கள் எதுவும் கிடைக்கவில்லை</string>
@@ -407,7 +405,6 @@
     <string name="preview_background_img_des">முன்னோட்டம் பின்னணி</string>
     <string name="show_fillers_settings">அனிமேசுக்கு நிரப்பு அத்தியாயத்தைக் காட்டு</string>
     <string name="automatic_plugin_download_summary">கூடுதல் களஞ்சியங்களிலிருந்து இன்னும் நிறுவப்படாத அனைத்து செருகுநிரல்களையும் தானாக நிறுவவும்.</string>
-    <string name="anim">அதே தேவ்சின் அனிம் பயன்பாடு</string>
     <string name="episodes">அத்தியாயங்கள்</string>
     <string name="status_completed">முடிந்தது</string>
     <string name="no_subtitles">வசன வரிகள் இல்லை</string>
@@ -613,7 +610,6 @@
     <string name="device_pin_error_message">சாதன முள் குறியீட்டைப் பெற முடியாது, உள்ளக அங்கீகாரத்தை முயற்சிக்கவும்</string>
     <string name="device_pin_expired_message">முள் குறியீடு இப்போது காலாவதியானது!</string>
     <string name="subs_edge_size">விளிம்பு அளவு</string>
-    <string name="cs3wiki">கிளவுட்ச்ட்ரீம் விக்கி</string>
     <string name="preview_seekbar">சீக்பார் முன்னோட்டம்</string>
     <string name="backup_path_title">காப்பு கோப்புறை இருப்பிடம்</string>
     <string name="open_local_video">உள்ளக வீடியோவைத் திறக்கவும்</string>

@@ -225,9 +225,6 @@
     <string name="show_trailers_settings">Mostrar avances</string>
     <string name="kitsu_settings">Mostrar pósters de Kitsu</string>
     <string name="github">Github</string>
-    <string name="lightnovel">App de novela ligera de los mismos desarrolladores</string>
-    <string name="anim">App de Anime de los mismos desarrolladores</string>
-    <string name="discord">Únete a Discord</string>
     <string name="benene">Dale una banana a los desarrolladores</string>
     <string name="benene_des">Banana otorgada</string>
     <string name="no_chromecast_support_toast">El proveedor no tiene soporte para Chromecast</string>
@@ -587,7 +584,6 @@
     <string name="next_season_episode_format" formatted="true">La temporada %1$d y el episodio %2$d se estrenarán en</string>
     <string name="player_settings_select_cast_device">Seleccionar el dispositivo para transmitir</string>
     <string name="episode_action_cast_mirror">Espejo de transmisión</string>
-    <string name="cs3wiki">Wiki de CloudStream</string>
     <string name="pref_category_security">Seguridad</string>
     <string name="pref_category_accounts">Cuentas</string>
     <string name="auth_locally">Autenticación local</string>

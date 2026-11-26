@@ -187,9 +187,7 @@
     <string name="episode_action_auto_download">Автоматическое скачивание</string>
     <string name="episode_action_download_mirror">Скачивание. Зеркало</string>
     <string name="season">Сезон</string>
-    <string name="anim">Аниме приложение от тех же разработчиков</string>
     <string name="automatic_plugin_download_summary">Автоматически скачивать ещё не установленные дополнения из добавленных источников.</string>
-    <string name="discord">Присоединиться к Discord-серверу</string>
     <string name="free_storage">Свободно</string>
     <string name="next_episode_time_min_format" formatted="true">%dm</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$dч %2$dм</string>
@@ -311,7 +309,6 @@
     <string name="video_buffer_clear_settings">Отчистить кеш видео и изображений</string>
     <string name="video_ram_description">Вызывает сбои, если установлено слишком высокое значение на устройствах с небольшим объемом памяти, таких как Android TV.</string>
     <string name="video_disk_description">Вызывает проблемы, если установлено слишком высокое значение на устройствах с небольшим объёмом памяти, таких как Android TV.</string>
-    <string name="lightnovel">Лёгкое приложение для новелл от тех же разработчиков</string>
     <string name="extension_language">Язык</string>
     <string name="hls_playlist">Плейлист HLS</string>
     <string name="extension_install_first">Сначала установить дополнение</string>
@@ -608,7 +605,6 @@
     <string name="delete_message_multiple" formatted="true">Вы уверены, что хотите навсегда удалить данный объект? \n \n%s</string>
     <string name="device_pin_error_message">Невозможно получить ПИН-код устройства, попробуйте локальную аутентификацию</string>
     <string name="device_pin_url_message">Откройте <b>%s</b> на вашем смартфоне или компьютере и введите данный код</string>
-    <string name="cs3wiki">CloudStream Вики</string>
     <string name="device_pin_expired_message">ПИН-код больше не действителен !</string>
     <string name="device_pin_counter_text">Код истекает через %1$dмин %2$dсек</string>
     <string name="sort_release_date_new">Дата выпуска (от нового к старому)</string>

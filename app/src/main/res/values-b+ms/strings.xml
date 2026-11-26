@@ -216,7 +216,6 @@
     <string name="add_site_pref">Klon laman web</string>
     <string name="example_email">hello@world.com</string>
     <string name="bottom_title_settings">Lokasi tajuk poster</string>
-    <string name="cs3wiki">Wiki CloudStream</string>
     <string name="delete">Padam</string>
     <string name="ova">OVA</string>
     <string name="asian_drama">Drama Asia</string>
@@ -395,9 +394,6 @@
     <string name="category_account">Akaun dan Sekuriti</string>
     <string name="advanced_search">Carian Bestari</string>
     <string name="advanced_search_des">Beri hasil carian dipisah mengikut pelbagai sumber</string>
-    <string name="lightnovel">Aplikasi Light novel oleh pembangun sama</string>
-    <string name="anim">Aplikasi Anime oleh pembangun sama</string>
-    <string name="discord">Menyertai Discord</string>
     <string name="delete_files">Padam Fail</string>
     <string name="delete_format" formatted="true">Padam (%1$d | %2$s)</string>
     <string name="resize_fit">Muatkan ke skrin</string>

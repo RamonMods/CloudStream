@@ -221,8 +221,6 @@
     <string name="apk_installer_settings">APK ইনষ্টলাৰ</string>
     <string name="apk_installer_settings_des">কিছুমান ফোনে নতুন পেকেজ ইনষ্টলাৰ সমৰ্থন নকৰে। আপডেটসমূহ ইনষ্টল নকৰিলে লিগেচি বিকল্প পৰীক্ষা কৰক।</string>
     <string name="github">Github</string>
-    <string name="lightnovel">একেই ডেভেলপাৰৰ দ্বাৰা লাইট নভেল এপ্‌</string>
-    <string name="discord">Discordত যোগদান কৰক</string>
     <string name="no_links_found_toast">লিংক পোৱা নগল</string>
     <string name="benene">ডেভেলপাৰক এখন বেঙেনা দিয়ক</string>
     <string name="benene_des">দিয়া নাম</string>
@@ -568,7 +566,6 @@
     <string name="biometric_warning">আপোনাৰ CloudStream ডেটা এতিয়া সংৰক্ষণ কৰা হৈছে। এইৰ সম্ভাৱনা অত্যন্ত কম, কিন্তু সকলো ডিভাইচৰ ব্যৱহাৰ ভিন্ন হ\'ব পাৰে। যদি এপ্লিকেচনটোত প্রবেশ কৰিব নোৱাৰা অৱস্থাত পৰাৰ কম সম্ভাৱনাৰ ঘটনা ঘটে, তেন্তে সম্পূৰ্ণভাবে এপ্প ডেটা মচি দিয়ক আৰু সংৰক্ষণৰ পৰা পুনৰুদ্ধাৰ কৰক। কোনো অশান্তিৰ বাবে আমাৰ দুখিত হওক।</string>
     <string name="download">ডাউনলোড</string>
     <string name="updates_settings_des">এপ্‌ আৰম্ভণিৰ পিছত নতুন আপডেটৰ সন্ধান কৰক।</string>
-    <string name="anim">একেই ডেভেলপাৰৰ দ্বাৰা এনিম এপ্‌</string>
     <string name="new_update_format" formatted="true">নতুন আপডেট পোৱা গ’ল! \n%1$s -&gt; %2$s</string>
     <string name="filler" formatted="true">ফিলাৰ</string>
     <string name="play_with_app_name">CloudStreamৰে প্লে কৰক</string>
@@ -601,7 +598,6 @@
     <string name="pref_category_accounts">একাউণ্টসমূহ</string>
     <string name="qr_image">কিউ আৰ কোডৰ ছবি</string>
     <string name="delete_plugin">প্লাগইন ডিলিট কৰক</string>
-    <string name="cs3wiki">CloudStream ৱিকি</string>
     <string name="pref_category_security">সুৰক্ষা</string>
     <string name="device_pin_url_message">আপোনাৰ স্মাৰ্টফোন বা কম্পিউটাৰত <b>%s</b> লগ কৰক আৰু ওপৰৰ ক\'ডটো প্ৰৱিষ্ট কৰক</string>
     <string name="device_pin_error_message">ডিভাইচ পিন ক\'ড পোৱা নাই, স্থানীয় প্ৰমাণীকৰণ চেষ্টা কৰক</string>

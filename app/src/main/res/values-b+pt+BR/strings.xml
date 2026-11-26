@@ -156,9 +156,6 @@
     <string name="updates_settings_des">Automaticamente procurar por novas atualizações ao abrir.</string>
     <string name="github">Github</string>
     <string name="cloudbrasil_extensions">Extensões CloudBrasil</string>
-    <string name="lightnovel">App de Light novel criado pelos mesmos desenvolvedores</string>
-    <string name="anim">App de Anime criado pelos mesmos desenvolvedores</string>
-    <string name="discord">Entre no servidor do Discord</string>
     <string name="benene">Dar um benene aos desenvolvedores</string>
     <string name="benene_des">Benene dada</string>
     <string name="app_language">Idioma do aplicativo</string>
@@ -603,7 +600,6 @@
     <string name="next_season_episode_format" formatted="true">%2$dº episódio da %1$dª temporada estreia em</string>
     <string name="player_settings_select_cast_device">Selecione o dispositivo de transmissão</string>
     <string name="episode_action_cast_mirror">Espelhar transmissão</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
     <string name="pref_category_security">Segurança</string>
     <string name="pref_category_accounts">Contas</string>
     <string name="auth_locally">Autenticação local</string>

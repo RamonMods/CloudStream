@@ -281,9 +281,6 @@
     <string name="pref_filter_search_quality">הסתר את איכות הסרטון שנבחרה בתוצאות החיפוש</string>
     <string name="apk_installer_settings">מתקין APK</string>
     <string name="apk_installer_settings_des">חלק מהמכשירים אינם תומכים במתקין החבילות החדש. אם עדכונים לא מותקנים, נסה את האפשרות הישנה.</string>
-    <string name="lightnovel">אפליקצית רומנים קלים על ידי אותו מפתחים</string>
-    <string name="anim">אפליקצית אנימה על ידי אותו מפתחים</string>
-    <string name="discord">הצטרפות לדיסקורד</string>
     <string name="app_language">שפת האפליקציה</string>
     <string name="no_chromecast_support_toast">לספק זה אין תמיכה בכרומקאסט</string>
     <string name="copy_link_toast">הקישור הועתק ללוח</string>
@@ -598,7 +595,6 @@
     <string name="episode_upcoming_format" formatted="true">בקרוב בעוד %s</string>
     <string name="episode_action_cast_mirror">שדר מראה</string>
     <string name="player_settings_select_cast_device">בחר מכשיר שידור</string>
-    <string name="cs3wiki">הוויקי של קלאודסטרים</string>
     <string name="pref_category_security">אבטחה</string>
     <string name="pref_category_accounts">חשבונות</string>
     <string name="auth_locally">אימות מקומי</string>

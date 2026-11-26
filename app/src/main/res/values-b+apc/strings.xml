@@ -33,7 +33,6 @@
     <string name="subs_download_languages">نزل الترجمات مع الڤيديو</string>
     <string name="search_provider_text_providers">عوزو المصادر لَ تنبّشو</string>
     <string name="go_back_img_des">رجاع</string>
-    <string name="discord">انضم لگروپ \"كلود ستريم\" ع الـ\"ديسكورد\"</string>
     <string name="episode_more_options_des">بعد خيارات</string>
     <string name="backup_success">تسيّڤة النسخة الإحتياطية</string>
     <string name="benene_count_text">صرتو عاطين %d موزززة للمطورين</string>
@@ -88,7 +87,6 @@
     <string name="next_episode">الحلقة يللي بَعدها</string>
     <string name="updates_settings">فرجي تجديدات الآپ</string>
     <string name="library">رفّ</string>
-    <string name="lightnovel">آپ من نفس المطورين للروايات الخفيفة، بدل من الڤيديوات</string>
     <string name="automatic_plugin_download_mode_title">حدد الوضع لَتفَلتِر تنزيل الإضافات</string>
     <string name="episode">حلقة</string>
     <string name="autoplay_next_settings_des">مَشّي الحلقة يللي بعدا تلقائيًا بعد ما تُخلَص الحلقة</string>
@@ -124,7 +122,6 @@
     <string name="settings_info">معلومات</string>
     <string name="title_home">الرئيسية</string>
     <string name="skip_loading">أفّو اللودينگ</string>
-    <string name="anim">آپ للأنمي من نفس المطورين</string>
     <string name="swipe_to_seek_settings_des">سحابو من جِهة لَ جِهة لتقدمو وترَجِعو الڤيديو</string>
     <string name="player_size_settings">كبسة تغيير حجم الڤيديو</string>
     <string name="result_share">شّار</string>
@@ -587,7 +584,6 @@
     <string name="next_season_episode_format" formatted="true">الحلقة ال %2$d من الجزء ال%1$d رح تنزل ب</string>
     <string name="episode_action_cast_mirror">كاست مراية</string>
     <string name="player_settings_select_cast_device">نقي جهاز الكاست</string>
-    <string name="cs3wiki">ويكي \"كلود ستريم\"</string>
     <string name="pref_category_accounts">أكونتات</string>
     <string name="pref_category_security">سكوريتي</string>
     <string name="qr_image">صورة الـ\"كيو آر\" كود</string>

@@ -150,9 +150,6 @@
     <string name="updates_settings">التحديث التلقائي</string>
     <string name="updates_settings_des">ابحث تلقائيا عن التحديثات الجديدة بعد بدء التطبيق.</string>
     <string name="github">غيت هاب</string>
-    <string name="lightnovel">تطبيق روايات خفيف من نفس المطورين</string>
-    <string name="anim">تطبيق أنمي من نفس المطورين</string>
-    <string name="discord">انضم إلى الديسكورد</string>
     <string name="benene">إعط موزة للمطورين</string>
     <string name="benene_des">الموز المُعطي</string>
     <string name="app_language">لغة التطبيق</string>
@@ -600,7 +597,6 @@
     <string name="next_season_episode_format" formatted="true">سيتم إصدار الحلقة %1$d من الموسم %2$d في</string>
     <string name="episode_action_cast_mirror">مرآة البث</string>
     <string name="player_settings_select_cast_device">حدد جهاز البث</string>
-    <string name="cs3wiki">CloudStream ويكي</string>
     <string name="pref_category_security">إعدادات الأمان</string>
     <string name="pref_category_accounts">الحسابات</string>
     <string name="qr_image">صورة رمز الاستجابة السريعة</string>

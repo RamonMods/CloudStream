@@ -142,9 +142,6 @@
     <string name="updates_settings">앱 업데이트 표시</string>
     <string name="updates_settings_des">앱을 시작한 후 새 업데이트를 자동으로 검색합니다.</string>
     <string name="apk_installer_settings_des">일부 기기에서는 최신 방식의 설치 프로그램이 작동하지 않을 수 있습니다. 업데이트가 안 된다면 \'기본 방식\' 설정을 사용해 보세요.</string>
-    <string name="lightnovel">같은 개발자가 만든 라이트 노벨 앱</string>
-    <string name="anim">같은 개발자가 만든 애니메이션 앱</string>
-    <string name="discord">Discord에 참여하기</string>
     <string name="benene">개발자에게 바나나 주기</string>
     <string name="benene_des">바나나 줌</string>
     <string name="app_language">앱 언어</string>
@@ -511,7 +508,6 @@
     <string name="toast_copied">복사 완료!</string>
     <string name="repo_copy_label">레포지토리 이름 및 URL</string>
     <string name="test_extensions_summary">본 테스트는 개발자만을 대상으로 하며, 확장자의 작업을 확인하거나 거부하지 않습니다.</string>
-    <string name="cs3wiki">CloudStream 위키</string>
     <string name="links_reloaded_toast">링크 초기화 완료</string>
     <string name="backup_frequency">백업 빈도</string>
     <string name="favorites_list_name">즐겨찾기</string>

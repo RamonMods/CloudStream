@@ -156,7 +156,6 @@
     <string name="benene_des">চা খাওয়ানো হয়েছে</string>
     <string name="go_forward_30">+৩০</string>
     <string name="movies">মুভিসমূহ</string>
-    <string name="discord">ডিসকর্ডে যোগ দিন</string>
     <string name="torrent">টরেন্টস</string>
     <string name="delete_message" formatted="true">এটি স্থায়ীভাবে মুছে ফেলা হবে %s \nআপনি কি নিশ্চিত?</string>
     <string name="pause">থামুন</string>
@@ -181,7 +180,6 @@
     <string name="synopsis">সারমর্ম</string>
     <string name="used_storage">ব্যবহৃত</string>
     <string name="library">লাইব্রেরী</string>
-    <string name="lightnovel">আমাদের তৈরি ছোট উপন্যাস পড়ার অ্যাপ্লিকেশন</string>
     <string name="resume_time_left" formatted="true">%d মি \nবাকি</string>
     <string name="others">অন্যান্য</string>
     <string name="status_ongoing">চলমান</string>
@@ -201,7 +199,6 @@
     <string name="restore_settings">ব্যাকআপ থেকে ডেটা পুনরুদ্ধার করুন</string>
     <string name="copy_link_toast">ক্লিপবোর্ডে লিঙ্ক কপি করা হয়েছে</string>
     <string name="status_completed">দেখা শেষ</string>
-    <string name="anim">আমাদের তৈরি Anime দেখার অ্যাপ্লিকেশন</string>
     <string name="nsfw">18+</string>
     <string name="anime">এনিমে</string>
     <string name="pref_filter_search_quality">অনুসন্ধানের ফলে নির্বাচিত ভিডিওর মান লুকান</string>
@@ -678,7 +675,6 @@
     <string name="biometric_prompt_description">কয়েকবার ব্যর্থ প্রচেষ্টার পর প্রম্পটটি বন্ধ হয়ে যাবে। পুনরায় চেষ্টা করতে কেবল অ্যাপটি রিস্টার্ট করুন।</string>
     <string name="biometric_warning">আপনার CloudStream ডেটা এখন ব্যাকআপ করা হয়েছে। এমনটি ঘটার সম্ভাবনা অত্যন্ত কম হলেও প্রতিটি ডিভাইস ভিন্নভাবে আচরণ করতে পারে। বিরল ক্ষেত্রে যদি অ্যাপ অ্যাক্সেস করা থেকে লক হয়ে যান, তবে সম্পূর্ণ অ্যাপ ডেটা পরিষ্কার করুন এবং ব্যাকআপ থেকে পুনরুদ্ধার করুন। এর ফলে উদ্ভূত যেকোনো অসুবিধার জন্য আমরা আন্তরিকভাবে দুঃখিত।</string>
     <string name="reset_btn">রিসেট</string>
-    <string name="cs3wiki">CloudStream উইকি</string>
     <string name="device_pin_url_message"><b>%s</b> আপনার স্মার্টফোন বা কম্পিউটারে ভিজিট করুন এবং উপরের কোডটি প্রবেশ করান</string>
     <string name="device_pin_error_message">ডিভাইসের PIN কোড পাওয়া যাচ্ছে না, স্থানীয় প্রমাণীকরণ চেষ্টা করুন</string>
     <string name="device_pin_expired_message">PIN কোডের মেয়াদ শেষ হয়েছে!</string>

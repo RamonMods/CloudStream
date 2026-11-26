@@ -159,9 +159,6 @@
     <string name="updates_settings">显示应用更新</string>
     <string name="updates_settings_des">启动应用后自动搜索更新。</string>
     <string name="github">Github</string>
-    <string name="lightnovel">由相同开发者开发的轻小说应用</string>
-    <string name="anim">由相同开发者开发的动漫应用</string>
-    <string name="discord">加入 Discord</string>
     <string name="benene">给开发者送一根香蕉</string>
     <string name="benene_des">送香蕉</string>
     <string name="app_language">应用语言</string>
@@ -598,7 +595,6 @@
     <string name="reset_btn">重置</string>
     <string name="biometric_prompt_description">在多次尝试失败后，提示将关闭。只需重启应用程序再试。</string>
     <string name="episode_upcoming_format" formatted="true">即将在 %s</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
     <string name="player_settings_select_cast_device">选择投射设备</string>
     <string name="next_season_episode_format" formatted="true">%1$d季%2$d集将在</string>
     <string name="episode_action_cast_mirror">投射镜像</string>

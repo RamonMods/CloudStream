@@ -154,8 +154,6 @@
     <string name="updates_settings_des">Procurar automaticamente por novas atualizações depois de iniciar o app.</string>
     <string name="github">Github</string>
     <string name="cloudbrasil_extensions">Extensões CloudBrasil</string>
-    <string name="lightnovel">App light novel pelos mesmos devs</string>
-    <string name="discord">Junte-se ao Discord</string>
     <string name="benene">Dar um benene aos devs</string>
     <string name="benene_des">Benene dada</string>
     <string name="app_language">Idioma da App</string>
@@ -391,7 +389,6 @@
     <string name="test_passed">Sucesso</string>
     <string name="library">Biblioteca</string>
     <string name="browser">Navegar</string>
-    <string name="anim">Aplicativo de Anime pelos mesmos desenvolvedores</string>
     <string name="ova_singular">Ova</string>
     <string name="anime_singular">Anime</string>
     <string name="android_tv_interface_on_seek_settings">Player visível - Procurar valor</string>
@@ -615,7 +612,6 @@
     <string name="device_pin_counter_text">O código expira em %1$dm %2$ds</string>
     <string name="sort_release_date_new">Data de Lançamento (Novo para Antigo)</string>
     <string name="sort_release_date_old">Data de Lançamento (Antigo para Novo)</string>
-    <string name="cs3wiki">Wiki do CloudStream</string>
     <string name="device_pin_expired_message">O código PIN está agora expirado !</string>
     <string name="no_subtitles_loaded">Ainda sem legendadas carregadas</string>
     <string name="open_downloaded_repo">Abrir repositório</string>

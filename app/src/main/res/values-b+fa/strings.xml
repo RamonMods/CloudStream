@@ -209,7 +209,6 @@
     <string name="restore_failed_format" formatted="true">مشکل در بازگردانی داده از پرونده %s</string>
     <string name="site">وبگاه</string>
     <string name="benene_des">انعام دادن</string>
-    <string name="discord">عضویت در دیسکورد</string>
     <string name="benene">هدیه انعام به توسعه‌دهندگان</string>
     <string name="status_completed">تمام‌شده</string>
     <string name="no_subtitles">بدون زیرنویس</string>
@@ -305,8 +304,6 @@
     <string name="updates_settings">نشان دادن آپدیت های برنامه</string>
     <string name="redo_setup_process">دوباره پروسه راه اندازی را انجام بده</string>
     <string name="apk_installer_settings">نصب کننده APK</string>
-    <string name="lightnovel">برنامه سبک رمان از توسعه دهندگان یکسان</string>
-    <string name="anim">برنامه انیمه از توسعه دهندگان یکسان</string>
     <string name="no_chromecast_support_toast">این ارائه دهنده هیچ پشتیبانی از کروم کست ندارد</string>
     <string name="test_failed">با شکست مواجه شد</string>
     <string name="test_warning">اخطار</string>

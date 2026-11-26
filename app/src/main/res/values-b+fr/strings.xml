@@ -286,9 +286,6 @@
     <string name="updates_settings">Afficher les mises à jour de l\'application</string>
     <string name="updates_settings_des">Recherche automatique de nouvelles mises à jour au démarrage.</string>
     <string name="github">Github</string>
-    <string name="lightnovel">Application Light Novel par les mêmes devs</string>
-    <string name="anim">Anime app by the same devs</string>
-    <string name="discord">Rejoignez le Discord</string>
     <string name="next_episode_time_hour_format" formatted="true">%1$d h %2$d min</string>
     <string name="next_episode_time_min_format" formatted="true">%d min</string>
     <string name="play_with_app_name">Lire avec CloudStream</string>
@@ -599,7 +596,6 @@
     <string name="delete_format" formatted="true">Supprimer (%1$d | %2$s)</string>
     <string name="open_downloaded_repo">Ouvrir le dépôt</string>
     <string name="device_pin_counter_text">Code expire dans %1$dm %2$ds</string>
-    <string name="cs3wiki">Wiki de CloudStream</string>
     <string name="device_pin_expired_message">Le code PIN est maintenant expiré !</string>
     <string name="qr_image">Image du code QR</string>
     <string name="delete_plugin">Supprimer l\'extension</string>

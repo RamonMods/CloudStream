@@ -154,9 +154,6 @@
     <string name="updates_settings">Показвай актуализации на приложението</string>
     <string name="updates_settings_des">Автоматично търси нови актуализации при стартиране на приложението.</string>
     <string name="github">Github</string>
-    <string name="lightnovel">Light novel - приложение от същите разработчици</string>
-    <string name="anim">Приложение за аниме от същите разработчици</string>
-    <string name="discord">Присъединете се към Discord</string>
     <string name="benene">Дайте банан/и разработчиците</string>
     <string name="benene_des">Даден/и банан/и</string>
     <string name="app_language">Език на приложението</string>
@@ -633,7 +630,6 @@
     <string name="open_downloaded_repo">Отвори хранилище</string>
     <string name="reset_btn">Нулиране</string>
     <string name="device_pin_expired_message">PIN кодът е изтекъл !</string>
-    <string name="cs3wiki">CloudStream Уики</string>
     <string name="password_pin_authentication_title">Удостоверяване с парола/PIN</string>
     <string name="custom_media_singular">Медия</string>
     <string name="audio_book_singular">Аудиокнига</string>

@@ -158,9 +158,6 @@
     <string name="updates_settings">Uygulama güncellemelerini göster</string>
     <string name="updates_settings_des">Uygulama başlatıldıktan sonra güncellemeleri ara.</string>
     <string name="github">GitHub</string>
-    <string name="lightnovel">Aynı geliştiricilerin Lightnovel Crawler uygulaması</string>
-    <string name="anim">Aynı geliştiricilerin anime uygulaması</string>
-    <string name="discord">Discord\'a katıl</string>
     <string name="benene">Geliştiricilere muz ver</string>
     <string name="benene_des">Verilen muz</string>
     <string name="app_language">Uygulama dili</string>
@@ -601,7 +598,6 @@
     <string name="next_season_episode_format" formatted="true">%1$d. Sezon %2$d. Bölüm şu tarihte yayınlanacak</string>
     <string name="player_settings_select_cast_device">Yansıtılacak cihaz seç</string>
     <string name="episode_action_cast_mirror">Ekran yansıtma</string>
-    <string name="cs3wiki">CloudStream bilgi</string>
     <string name="pref_category_security">Güvenlik</string>
     <string name="pref_category_accounts">Hesaplar</string>
     <string name="auth_locally">Yerel Olarak Doğrula</string>

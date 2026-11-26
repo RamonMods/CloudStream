@@ -151,9 +151,6 @@
     <string name="updates_settings">Afișați actualizările aplicației</string>
     <string name="updates_settings_des">Căutați automat noi actualizări după pornirea aplicației.</string>
     <string name="github">GitHub</string>
-    <string name="lightnovel">&gt;Aplicație Light Novel realizată de aceiași dezvoltator</string>
-    <string name="anim">Aplicație Anime realizată de aceiași dezvoltatorilor</string>
-    <string name="discord">Alăturați-vă pe Discord</string>
     <string name="benene">Oferiți dezvoltatorilor o banană</string>
     <string name="benene_des">Oferă o banană</string>
     <string name="app_language">Limba aplicației</string>
@@ -602,7 +599,6 @@
     <string name="biometric_setting">Blocare cu biometrie</string>
     <string name="resume_remaining" formatted="true">%s \nrămase</string>
     <string name="episode_upcoming_format" formatted="true">Următorul în %s</string>
-    <string name="cs3wiki">CloudStream Wiki</string>
     <string name="next_season_episode_format" formatted="true">Sezonul %1$d Episod %2$d va fi lansat în</string>
     <string name="player_settings_select_cast_device">Selectați divece-ul pe care doriți să faceți cast</string>
     <string name="episode_action_cast_mirror">Cast mirror</string>

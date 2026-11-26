@@ -4,7 +4,7 @@ Resposta direta: existem **19 extensões BR prontas para portar** em três repos
 
 ## 1. Linha de base (o que o CloudBrasil já tem)
 
-`RamonMods/CloudBrasil` — GPL-3.0, push em 2026-11-26, `builds/repo.json` e `builds/plugins.json` respondem. 12 plugins: AnimeFire, AnimesFHD, AniTube, CineAgora, DattebayoBR, Doramogo, Goyabu, MendigoFlix, PobreFlix, ReiDosEmbeds, StreamFlix, EmbedTV. O repo é derivado direto de `lawlietbr/lietrepo` (mesma árvore de pastas).
+`RamonMods/CloudBrasil` — GPL-3.0, push em 2026-11-26, `builds/repo.json` e `builds/plugins.json` respondem. 18 plugins: AnimeFire, AnimesCloud, AnimesDigital, AnimesFHD, AnimesOnlineCC, AniTube, CineAgora, DattebayoBR, DonghuaNoSekai, DoramasOnline, Doramogo, EmbedTV, Goyabu, MendigoFlix, PobreFlix, ReiDosEmbeds, StreamFlix, Xtream. Código original do projeto; as extensões derivadas mantêm os créditos dos autores originais (ex.: AnimesFHD).
 
 ## 2. Repositórios candidatos
 
@@ -12,7 +12,7 @@ Resposta direta: existem **19 extensões BR prontas para portar** em três repos
 |---|---|---|---|---|---|---|
 | saimuelbr/saimuelrepo | https://github.com/saimuelbr/saimuelrepo | nenhuma | 10 (9 novos) | 2026-10-17 | OK (`builds/repo.json` → `builds/plugins.json`) | **Sim**, maior ganho líquido |
 | franciscoalro/CloudstreamRepo | https://github.com/franciscoalro/CloudstreamRepo | nenhuma | 11 (10 novos) | 2026-02-05 | OK (raiz + `builds/`) | **Sim**, mas versões antigas |
-| lawlietbr/lietrepo | https://github.com/lawlietbr/lietrepo | nenhuma | 13 (1 novo: SuperFlix) | 2026-11-20 | OK | Parcial — é o pai do CloudBrasil |
+| lawlietbr/lietrepo | https://github.com/lawlietbr/lietrepo | nenhuma | 13 (1 novo: SuperFlix) | 2026-11-20 | OK | Parcial — repo PT-BR de terceiros; referência |
 | Kraptor123/Cs-Karma | https://github.com/Kraptor123/Cs-Karma | nenhuma | dezenas (multi-idoma; FLIXLATAM, DoramasLatinoX etc.) | 2026-11-24 | OK (pluginLists aponta para branch `builds`, conferir) | Parcial — só filtrar BR |
 | admknight/CloudstreamExtensions | https://github.com/admknight/CloudstreamExtensions | nenhuma | mega-repo dinâmico | 2026-11-25 | OK | Não — foco global, ruido |
 | phisher98/cloudstream-extensions-phisher | https://github.com/phisher98/cloudstream-extensions-phisher | nenhuma | sem `builds/` nem `repo.json` | 2026-11-24 | Não | Não como repo de plugins |
@@ -37,7 +37,7 @@ Resposta direta: existem **19 extensões BR prontas para portar** em três repos
 | NovelasFlix | franciscoalro | Filme/Série | v1 / API 1 | novelasflix4k.me | Médio |
 | EmbedCanais TV | franciscoalro | Live | v1 / API 1 | embedcanais.com | Médio |
 | MaxSeries | franciscoalro | Filme/Série | v264 / API 1 | maxseries.pics | Baixo (versão suspeita) |
-| SuperFlix | lietrepo | Filme/Série | — | — | Fácil (mesma linhagem) |
+| SuperFlix | lietrepo | Filme/Série | — | — | Fácil (mesma linhagem de código) |
 | AnimesCloud | saimuel | Anime | v4 / API 1 | — | Baixo |
 | TopFilmes | saimuel | Filme/Série | v2 / API 2 | topfilmes.biz | Baixo |
 | UltraCine | saimuel | Filme/Série | v4 / API 1 | ultracine.org | Baixo |
