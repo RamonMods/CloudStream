@@ -792,28 +792,28 @@ object ExtensionsScreen : Screen {
                                 style = MaterialTheme.typography.bodyMedium
                             )
                         }
-                        item {
-                            val minHeight = LocalPreferenceMinHeight.current
-                            Row(
-                                modifier = Modifier
-                                    .focusOutline()
-                                    .sizeIn(minHeight = minHeight)
-                                    .combinedClickable(onClick = onAddIptv)
-                                    .fillMaxWidth(),
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.Center,
-                            ) {
-                                Icon(
-                                    painter = painterResource(R.drawable.add_24px),
-                                    tint = MaterialTheme.colorScheme.onBackground,
-                                    contentDescription = stringResource(R.string.add_iptv)
-                                )
-                                Spacer(modifier = Modifier.width(MaterialTheme.padding.medium))
-                                Text(
-                                    text = stringResource(R.string.add_iptv),
-                                    style = MaterialTheme.typography.bodyMedium
-                                )
-                            }
+                    }
+                    item {
+                        val minHeight = LocalPreferenceMinHeight.current
+                        Row(
+                            modifier = Modifier
+                                .focusOutline()
+                                .sizeIn(minHeight = minHeight)
+                                .combinedClickable(onClick = onAddIptv)
+                                .fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
+                            Icon(
+                                painter = painterResource(R.drawable.add_24px),
+                                tint = MaterialTheme.colorScheme.onBackground,
+                                contentDescription = stringResource(R.string.add_iptv)
+                            )
+                            Spacer(modifier = Modifier.width(MaterialTheme.padding.medium))
+                            Text(
+                                text = stringResource(R.string.add_iptv),
+                                style = MaterialTheme.typography.bodyMedium
+                            )
                         }
                     }
                 } else {
