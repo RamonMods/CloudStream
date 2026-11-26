@@ -4,7 +4,7 @@ Este documento é uma explicação para pessoas entenderem o **porquê**, e não
 
 ## Decisões de projeto
 
-As decisões a seguir foram testadas no projeto irmão QuickNovel com muito sucesso e um processo de portabilidade tranquilo. Para inspiração e código em uma base parecida, veja o QuickNovel.
+As decisões a seguir foram consolidadas neste projeto e validadas no uso diário, com um processo de portabilidade tranquilo entre plataformas.
 
 ### Estrutura de arquivos
 

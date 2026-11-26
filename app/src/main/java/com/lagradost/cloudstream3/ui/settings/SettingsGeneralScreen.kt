@@ -54,7 +54,7 @@ object SettingsGeneralScreen : SearchableSettings {
     override fun getPreferences(): List<Preference> {
         val settings = rememberAppSettings()
 
-        // TODO Refactor entirely to use a different file path selector ect like QuickNovel
+        // TODO Refatorar para usar um seletor de caminho de arquivo mais simples
         val selectFileSelector =
             rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
                 // It lies, it can be null if file manager quits.
@@ -164,9 +164,8 @@ object SettingsGeneralScreen : SearchableSettings {
                         subtitle = downloadPathVisual,
                         title = stringResource(R.string.download_path_pref),
                         onClick = {
-                            // This is not a ListPreference because the old selection system is
-                            // broken af. This needs to be refactored to QuickNovels download path
-                            // system.
+                            // Não é uma ListPreference porque o sistema antigo de seleção
+                            // quebra fácil. Refatorar para um seletor de caminho unificado.
                             selectFileSelector.launchSafe(Uri.EMPTY)
                         },
                     ),
