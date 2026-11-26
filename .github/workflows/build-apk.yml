@@ -26,7 +26,16 @@ jobs:
         shell: bash
         run: |
           COMPILE_SDK=$(grep '^compileSdk' gradle/libs.versions.toml | grep -o '[0-9]\+' | head -1)
-          sdkmanager "platforms;android-${COMPILE_SDK}"
+          SDKMANAGER="${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SDKMANAGER" ]; then
+            SDKMANAGER=$(find "$ANDROID_HOME/cmdline-tools" -name sdkmanager -type f 2>/dev/null | head -1)
+          fi
+          if [ -n "$SDKMANAGER" ]; then
+            yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+            "$SDKMANAGER" "platforms;android-${COMPILE_SDK}" || true
+          else
+            echo "sdkmanager nao encontrado; usando plataformas ja instaladas no runner"
+          fi
 
       - name: Configurar o cache do Gradle
         uses: gradle/actions/setup-gradle@v5
