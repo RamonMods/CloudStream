@@ -892,7 +892,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
                         homeLoadingError.isVisible = true
                         homeMasterRecycler.isInvisible = true
 
-                        // Based on https://github.com/recloudstream/cloudstream/pull/1438
+                        // Baseado em correcao equivalente do projeto original.
                         val hasNoNetworkConnection = context?.isNetworkAvailable() == false
                         val isNetworkError = data.isNetworkError
 

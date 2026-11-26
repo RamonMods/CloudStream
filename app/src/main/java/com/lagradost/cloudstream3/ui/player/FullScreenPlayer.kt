@@ -1324,7 +1324,7 @@ open class FullScreenPlayer : AbstractPlayerFragment<FragmentPlayerBinding>(
             }
 
             // netflix capture back and hide ~monke
-            // This is removed due to inconsistent behavior on A36 vs A22, see https://github.com/recloudstream/cloudstream/issues/1804
+            // This is removed due to inconsistent behavior on A36 vs A22, ver historico do projeto original
             /*KeyEvent.KEYCODE_BACK -> {
                 if (isShowing && isLayout(TV or EMULATOR)) {
                     onClickChange()

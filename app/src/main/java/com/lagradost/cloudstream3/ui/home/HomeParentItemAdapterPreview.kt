@@ -170,7 +170,7 @@ class HomeParentItemAdapterPreview(
                     val context = v.context ?: return@ResumeItemAdapter
                     val builder: AlertDialog.Builder =
                         AlertDialog.Builder(context)
-                    // Copy pasted from https://github.com/recloudstream/cloudstream/pull/1658/files
+                    // Adaptado de correcao equivalente do projeto original.
                     builder.apply {
                         setTitle(R.string.clear_history)
                         setMessage(

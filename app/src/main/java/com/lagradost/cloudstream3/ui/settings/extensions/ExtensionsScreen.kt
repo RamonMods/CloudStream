@@ -206,9 +206,9 @@ fun Preview() {
                         uuid1 to Repository(
                             uuid = uuid1,
                             info = RepositoryInfo(
-                                name = "Cloudstream providers repository",
-                                description = "hello",
-                                url = "https://raw.githubusercontent.com/recloudstream/extensions/refs/heads/master/repo.json",
+                                name = "CloudBrasil",
+                                description = "Extensões brasileiras para CloudStream (PT-BR)",
+                                url = "https://raw.githubusercontent.com/RamonMods/CloudBrasil/main/builds/repo.json",
                                 iconUrl = null
                             ),
                             status = RepositoryStatus.Loading,

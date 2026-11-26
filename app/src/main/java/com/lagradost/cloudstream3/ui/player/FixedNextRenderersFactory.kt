@@ -29,7 +29,7 @@ class FixedNextRenderersFactory(
      * "ERROR_CODE_FAILED_RUNTIME_CHECK".
      *
      * Core issue: https://github.com/anilbeesetti/nextlib/pull/158
-     * Comment: https://github.com/recloudstream/cloudstream/pull/2342#issuecomment-3917751718
+     * Comment: historico do projeto original
      * */
     override fun buildTextRenderers(
         context: Context,
@@ -78,7 +78,7 @@ open class FixedNextRenderersFactoryWithoutVideo(
      * "ERROR_CODE_FAILED_RUNTIME_CHECK".
      *
      * Core issue: https://github.com/anilbeesetti/nextlib/pull/158
-     * Comment: https://github.com/recloudstream/cloudstream/pull/2342#issuecomment-3917751718
+     * Comment: historico do projeto original
      * */
     override fun buildTextRenderers(
         context: Context,

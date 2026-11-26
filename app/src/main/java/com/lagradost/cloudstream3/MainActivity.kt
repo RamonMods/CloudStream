@@ -328,7 +328,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                             }
                         }
                         // This specific intent is used for the gradle deployWithAdb
-                        // https://github.com/recloudstream/gradle/blob/master/src/main/kotlin/com/lagradost/cloudstream3/gradle/tasks/DeployWithAdbTask.kt#L46
+                        // referencia: tarefa DeployWithAdbTask do plugin Gradle
                         if (str == "$APP_STRING:") {
                             ioSafe {
                                 PluginManager.___DO_NOT_CALL_FROM_A_PLUGIN_hotReloadAllLocalPlugins(
@@ -1630,7 +1630,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
 //        ioSafe {
 //            val plugins =
-//                RepositoryParser.getRepoPlugins("https://raw.githubusercontent.com/recloudstream/TestPlugin/master/repo.json")
+//                RepositoryParser.getRepoPlugins("https://raw.githubusercontent.com/RamonMods/CloudBrasil/main/builds/repo.json")
 //                    ?: emptyList()
 //            plugins.map {
 //                println("Load plugin: ${it.name} ${it.url}")
@@ -1965,7 +1965,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                     val castPlayer = CastPlayer(castContext)
                     println("LOAD ITEM")
 
-                    castPlayer.loadItem(buildMediaQueueItem("https://cdn.discordapp.com/attachments/551382684560261121/730169809408622702/ChromecastLogo6.png"),0)
+                    castPlayer.loadItem(buildMediaQueueItem("https://github.com/RamonMods.png"),0)
                 }
             }
         }*/

@@ -4,7 +4,7 @@ Como o app é montado, como o sistema de plugins funciona e como uma extensão s
 
 ## Módulos do app
 
-O `settings.gradle.kts` do repositório `recloudstream/cloudstream` declara:
+O `settings.gradle.kts` deste repositório declara:
 
 ```kotlin
 rootProject.name = "CloudStream"

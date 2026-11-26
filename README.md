@@ -4,9 +4,9 @@
 
 **⚠️ Aviso: por padrão o app não traz nenhuma fonte de vídeo. Você precisa instalar extensões para adicionar funcionalidade.**
 
-<a href="https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"><img src=".github/images/download-cloudstream-pre.png" alt="Baixar CloudStream pré-release" width="430"/></a>
+<a href="https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml"><img src="https://img.shields.io/badge/Baixar_APK-Artifacts-1F883D?style=for-the-badge&logo=android&logoColor=white" alt="Baixar APK" height="50"/></a>
 
-[![Discord](https://invidget.switchblade.xyz/5Hus6fM)](https://discord.gg/5Hus6fM)
+**Discord: em breve.**
 
 </div>
 
@@ -28,7 +28,7 @@
 
 CloudStream é um centro de mídia que prioriza liberdade e flexibilidade para usuários e desenvolvedores. É um player multimídia baseado em extensões, com suporte a listas de acompanhamento. Existem extensões para visualizar vídeos de diversas fontes, como LibriVox (audiolivros), YouTube, Twitch, iptv-org e outras.
 
-**Não crie extensões ilegais nem use extensões que hospedem mídia com direitos autorais.** Para entender a posição do projeto sobre DMCA e EUCD, leia a página da organização [reCloudStream](https://github.com/recloudstream).
+**Não crie extensões ilegais nem use extensões que hospedem mídia com direitos autorais.** A posição do projeto sobre DMCA e EUCD está descrita no aviso legal deste repositório.
 
 ### Recursos
 
@@ -43,32 +43,32 @@ CloudStream é um centro de mídia que prioriza liberdade e flexibilidade para u
 
 ## Instalação
 
-A documentação oficial traz os passos para instalar e configurar o CloudStream:
+A instalação e a compilação estão documentadas neste repositório:
 
-- [Começando com o CloudStream](https://recloudstream.github.io/csdocs/)
-- [Versões (releases)](https://github.com/recloudstream/cloudstream/releases)
-- [Pré-release (build automática)](https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk)
+- [Arquitetura e compilação](ARQUITETURA.md)
+- [APK compilado pela CI (Actions)](https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml)
+- [Versões e tags](https://github.com/RamonMods/CloudStream/tags)
 
 <a id="contribuindo"></a>
 
 ## Como contribuir
 
-Aceitamos contribuições de boa vontade. Para começar, veja a [aba de issues](https://github.com/recloudstream/cloudstream/issues). Antes de mexer na interface, leia o [guia de migração para Compose](COMPOSE.md) e a [política de uso de IA](AI-POLICY.md), ambos em português neste repositório.
+Aceitamos contribuições de boa vontade. Para começar, veja a [aba de issues](https://github.com/RamonMods/CloudStream/issues). Antes de mexer na interface, leia o [guia de migração para Compose](COMPOSE.md) e a [política de uso de IA](AI-POLICY.md), ambos em português neste repositório.
 
 <a id="problemas"></a>
 
 ## Problemas
 
-Aceitamos issues e pull requests, mas pedimos que use um [modelo](https://github.com/recloudstream/cloudstream/issues/new/choose):
+Aceitamos issues e pull requests, mas pedimos que use um [modelo](https://github.com/RamonMods/CloudStream/issues/new/choose):
 
-- [Modelo de relatório de bug](https://github.com/recloudstream/cloudstream/issues/new?assignees=&labels=bug&projects=&template=application-bug.yml): informe versão baixada, dispositivo, versão do Android (e da API, se possível), comportamento esperado e real, e principalmente passos claros para reproduzir.
-- [Modelo de sugestão](https://github.com/recloudstream/cloudstream/issues/new?assignees=&labels=enhancement&projects=&template=feature-request.yml): antes de enviar, verifique se a sugestão já existe.
+- [Modelo de relatório de bug](https://github.com/RamonMods/CloudStream/issues/new?labels=bug&template=application-bug.yml): informe versão baixada, dispositivo, versão do Android (e da API, se possível), comportamento esperado e real, e principalmente passos claros para reproduzir.
+- [Modelo de sugestão](https://github.com/RamonMods/CloudStream/issues/new?labels=enhancement&template=feature-request.yml): antes de enviar, verifique se a sugestão já existe.
 
 <a id="extensoes"></a>
 
 ## Extensões
 
-O guia para desenvolvedores de extensões fica na documentação oficial: [Guia: Primeiros passos](https://recloudstream.github.io/csdocs/devs/gettingstarted/).
+O funcionamento das extensões está documentado em [ARQUITETURA.md](ARQUITETURA.md), que explica o formato `.cs3`, o `repo.json`, o `plugins.json` e o sistema de plugins do app.
 
 Neste repositório você encontra:
 
@@ -95,17 +95,13 @@ Ou use o shortcode `CloudBrasil`.
 
 ## Idiomas
 
-Mesmo sem contribuir com código ou documentação, você pode ajudar com traduções. A contribuição é muito bem-vinda:
-
-<a href="https://hosted.weblate.org/engage/cloudstream/">
-  <img src="https://hosted.weblate.org/widgets/cloudstream/-/app/multi-auto.svg" alt="Status das traduções" />
-</a>
+As traduções ficam em `app/src/main/res/values-*` e podem ser editadas direto no repositório. Contribuições de tradução são muito bem-vindas.
 
 <a id="mapa-do-ecossistema"></a>
 
 ## Mapa do ecossistema
 
-O app é só uma parte do projeto. A organização `recloudstream` mantém 25 repositórios: plugin Gradle, extensões oficiais, lista de repositórios, documentação, bibliotecas e forks. Veja o levantamento completo em [ECOSSISTEMA.md](ECOSSISTEMA.md) e o fluxo de build em [ARQUITETURA.md](ARQUITETURA.md).
+O app é só uma parte do projeto. O ecossistema do CloudStream tem 25 repositórios (plugin Gradle, extensões, lista de repositórios, documentação, bibliotecas e forks). O levantamento técnico completo está em [ECOSSISTEMA.md](ECOSSISTEMA.md), com o fluxo de build em [ARQUITETURA.md](ARQUITETURA.md) e os detalhes em [mapa/](mapa/).
 
 <a id="meus-projetos"></a>
 
@@ -118,10 +114,11 @@ O app é só uma parte do projeto. A organização `recloudstream` mantém 25 re
 
 ## Outras fontes
 
-- [Solução de problemas](https://recloudstream.github.io/csdocs/troubleshooting/)
-- [Outros repositórios de plugins](https://recloudstream.github.io/csdocs/repositories/)
-- Configuração para outros dispositivos: [Android TV](https://recloudstream.github.io/csdocs/other-devices/tv/), [Windows](https://recloudstream.github.io/csdocs/other-devices/windows/), [Linux](https://recloudstream.github.io/csdocs/other-devices/linux/)
-- Site: https://dweb.link/ipns/cloudstream.on.fleek.co/
+- [Como o app funciona](mapa/01-app.md)
+- [Sistema de plugins](mapa/02-plugins.md)
+- [Bibliotecas internas](mapa/03-libs.md)
+- [Novas extensões mapeadas](mapa/04-extensoes-novas.md)
+- [Situação dos sites avaliados](mapa/05-saimuel-sites.md)
 
 ## Aviso legal
 

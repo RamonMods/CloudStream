@@ -1,11 +1,12 @@
 # Repositórios de plugins CloudStream
 
-Lista obtida por GitHub Code Search (`repo.json` com `manifestVersion`) em 26/11/2026. A lista da comunidade em https://rentry.org/cs3-repos pede código de acesso nesta data, então esta tabela é a fonte verificável.
+Lista obtida por GitHub Code Search (`repo.json` com `manifestVersion`) em 26/11/2026. A lista da comunidade em rentry.org/cs3-repos pede código de acesso nesta data, então esta tabela é a fonte verificável.
+
+> **Nota:** a tabela é um levantamento técnico de repositórios públicos. O projeto CloudBrasil não usa servidores, contas ou serviços de terceiros; os links servem apenas como referência de código e comparação.
 
 | Repositório | Idioma/região | Observação |
 |---|---|---|
 | [`RamonMods/CloudBrasil`](https://github.com/RamonMods/CloudBrasil) | pt-br | Nosso. Animes, filmes, séries, doramas e ao vivo |
-| [`recloudstream/extensions`](https://github.com/recloudstream/extensions) | internacional | Coleção oficial; base para exemplos |
 | [`saimuelbr/saimuelrepo`](https://github.com/saimuelbr/saimuelrepo) | pt-br | BR; `.cs3`/`.jar` prontos |
 | [`CakesTwix/cloudstream-extensions-uk`](https://github.com/CakesTwix/cloudstream-extensions-uk) | ucraniano | Referência de implementação |
 | [`Bnyro/GermanProviders`](https://github.com/Bnyro/GermanProviders) | alemão | Referência de implementação |
