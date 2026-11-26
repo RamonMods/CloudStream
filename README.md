@@ -2,6 +2,8 @@
 
 # CloudStream
 
+**Edição brasileira do CloudStream (CloudBrasil)**
+
 **⚠️ Aviso: por padrão o app não traz nenhuma fonte de vídeo. Você precisa instalar extensões para adicionar funcionalidade.**
 
 <a href="https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml"><img src="https://img.shields.io/badge/Baixar_APK-Artifacts-1F883D?style=for-the-badge&logo=android&logoColor=white" alt="Baixar APK" height="50"/></a>
@@ -48,6 +50,8 @@ A instalação e a compilação estão documentadas neste repositório:
 - [Arquitetura e compilação](ARQUITETURA.md)
 - [APK compilado pela CI (Actions)](https://github.com/RamonMods/CloudStream/actions/workflows/build-apk.yml)
 - [Versões e tags](https://github.com/RamonMods/CloudStream/tags)
+
+Esta edição usa o identificador próprio `com.ramonmods.cloudstream`, então pode ser instalada ao lado do app original sem conflito.
 
 <a id="contribuindo"></a>
 
@@ -127,3 +131,7 @@ Este repositório é um projeto de software livre (GPL-3.0) e não hospeda nem i
 ## Licença
 
 GPL-3.0 — ver [LICENSE](LICENSE).
+
+---
+
+Mantido por **RamonMods**. Código sob GPL-3.0, com créditos históricos aos colaboradores do projeto original.
